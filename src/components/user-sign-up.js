@@ -12,10 +12,11 @@ class UserSignUp extends Component{
       first_name: this.refs.first_name.value,
       last_name: this.refs.last_name.value,
       email: this.refs.email.value,
-      password: this.refs.userPassword.value, 
-      password_confirmation: this.refs.passwordConfirmation.value }
+      password: this.refs.userPassword.value,
+      password_confirmation: this.refs.passwordConfirmation.value
+    }
   }
-  }
+  
   render(){
     return(
       <div>
@@ -31,3 +32,5 @@ class UserSignUp extends Component{
     )
   }
 }
+
+export default UserSignUp
