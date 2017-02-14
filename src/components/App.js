@@ -3,7 +3,7 @@ import UserSignUp from './user-sign-up'
 import logo from '../logo.svg'
 import '../App.css'
 import Gallery from './Gallery'
-import Piece from './Piece'
+
 
 class App extends Component {
   render() {
