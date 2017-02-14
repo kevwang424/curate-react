@@ -12,18 +12,24 @@ class Piece extends Component{
 
   render(){
     const {piece} = this.props
+
+    if (piece){
     return(
       <div>
       <h1>{piece.title}</h1>
       <img src={piece.image_url} alt={piece.title} />
     </div>
     )
+  } else {
+    return <div>Loading</div>
+  }
   }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps(state, ownProps) {
+  const currentPiece = state.piece.find(p => ownProps.id === p.id)
   return {
-    piece: state.piece
+    piece: currentPiece
   }
 }
 
