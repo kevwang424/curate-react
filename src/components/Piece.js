@@ -7,7 +7,7 @@ import { bindActionCreators } from 'redux'
 class Piece extends Component{
 
   componentDidMount(){
-    this.props.fetchPiece()
+      this.props.fetchPiece(this.props.id)
   }
 
   render(){
@@ -15,7 +15,7 @@ class Piece extends Component{
     return(
       <div>
       <h1>{piece.title}</h1>
-      <img src={piece.image_url}/>
+      <img src={piece.image_url} alt={piece.title} />
     </div>
     )
   }

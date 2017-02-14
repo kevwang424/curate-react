@@ -16,8 +16,8 @@ export const createUser = (user) => {
   }
 }
 
-export const fetchPiece = () => {
-  let response = axios.get(`${URL}/pieces/1`).then(response => response.data)
+export const fetchPiece = (id) => {
+  let response = axios.get(`${URL}/pieces/${id}`).then(response => response.data)
   return {
     type: 'FETCH_PIECE',
     payload: response
