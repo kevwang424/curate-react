@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { createUser } from '../actions/index'
 import { connect } from 'react-redux'
+// import { Link } from 'react-router'
 
 class UserSignUp extends Component {
   constructor() {

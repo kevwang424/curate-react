@@ -15,3 +15,19 @@ export const createUser = (user) => {
     payload: response
   }
 }
+
+export const fetchPiece = () => {
+  let response = axios.get(`${URL}/pieces/1`).then(response => response.data)
+  return {
+    type: 'FETCH_PIECE',
+    payload: response
+  }
+}
+
+export const fetchGallery = () => {
+  let response = axios.get(`${URL}/galleries/1`).then(response => response.data)
+  return {
+    type: 'FETCH_GALLERY',
+    payload: response
+  }
+}

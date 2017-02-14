@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import UserSignUp from './user-sign-up'
 import logo from '../logo.svg'
 import '../App.css'
+import Gallery from './Gallery'
+import Piece from './Piece'
 
 class App extends Component {
   render() {
@@ -9,11 +11,12 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>Hello World</h2>
         </div>
-        <UserSignUp />
+        <UserSignUp/>
+        <Gallery/>
       </div>
-    );
+    )
   }
 }
 
