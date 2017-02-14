@@ -1,21 +1,41 @@
 import React, { Component } from 'react'
 import Piece from './Piece'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { fetchGallery } from '../actions'
 
 class Gallery extends Component{
+
+  componentWillMount(){
+    this.props.fetchGallery()
+  }
+
   render(){
+    const {gallery} = this.props
+    if (!gallery.piece_ids) {
+      return <div>loading</div>
+    } else {
     return(
       <div>
-      <h1>Gallery HEY!</h1>
-      <Piece/>
+      <h1>{gallery.name}</h1>
+      <h1>{gallery.description}</h1>
+      {gallery.piece_ids.forEach(function(piece_id){
+        return (<Piece id={piece_id} />)
+      })
     </div>
-    )
+    )}
   }
 }
 
-// function mapStateToProps
-// end
-//
-// function mapDispatchToProps
-// end
+function mapStateToProps(state){
+  return {
+    gallery: state.gallery
 
-export default Gallery
+  }
+}
+
+function mapDispatchToProps(dispatch){
+  return bindActionCreators({fetchGallery}, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Gallery)
