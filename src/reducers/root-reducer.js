@@ -4,7 +4,7 @@ import pieceReducer from './piece-reducer'
 import galleryReducer from './gallery-reducer'
 
 export default combineReducers({
-  users: usersReducer,
+  user: usersReducer,
   piece: pieceReducer,
   gallery: galleryReducer
 })

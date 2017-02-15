@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import UserSignUp from './user-sign-up'
 import logo from '../logo.svg'
 import '../App.css'
+
+import User from './User'
 import Gallery from './Gallery'
 
 
@@ -14,7 +16,7 @@ class App extends Component {
           <h2>It Do Curate</h2>
         </div>
         <UserSignUp />
-        <Gallery />
+        <Gallery/>
       </div>
     )
   }
