@@ -16,6 +16,7 @@ class App extends Component {
           <h2>It Do Curate</h2>
         </div>
         <UserSignUp />
+        <User />
         <Gallery/>
       </div>
     )

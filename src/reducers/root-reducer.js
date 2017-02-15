@@ -2,9 +2,11 @@ import { combineReducers } from 'redux'
 import usersReducer from './users-reducer'
 import pieceReducer from './piece-reducer'
 import galleryReducer from './gallery-reducer'
+import galleryIndexReducer from './gallery-index-reducer'
 
 export default combineReducers({
   user: usersReducer,
   piece: pieceReducer,
-  gallery: galleryReducer
+  gallery: galleryReducer,
+  galleryIndex: galleryIndexReducer
 })
