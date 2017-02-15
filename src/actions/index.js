@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { browserHistory } from 'react-router'
 
-const URL = 'http://localhost:3000/api/v1/'
+const URL = 'http://localhost:3000/api/v1'
 
 export const createUser = (user) => {
   let response = axios.post(URL + 'signup', user).then((userData) => {
@@ -38,4 +38,13 @@ export const fetchUserGalleries = () => {
     type: 'FETCH_USER_GALLERIES',
     payload: response
   }
+}
+
+export const createSession = (loginParams) => {
+  console.log(loginParams)
+  let response = axios.post(`${URL}/sessions`, loginParams).then((response) => {
+    sessionStorage.setItem('jwt', response.data.jwt)
+    browserHistory.push('/')
+    return { email: response.data.email }
+  })
 }

@@ -20,12 +20,13 @@ class UserSignUp extends Component {
       password_confirmation: this.refs.passwordConfirmation.value
     }
     this.props.createUser(user)
+    this.refs.this_form.reset()
   }
 
   render(){
     return(
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} ref="this_form">
           <input ref="first_name" placeholder="Enter First Name"/>
           <input ref="last_name" placeholder="Enter Last Name"/>
           <input ref="email" placeholder="Enter Email"/>
