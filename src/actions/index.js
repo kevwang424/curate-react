@@ -24,8 +24,8 @@ export const fetchPiece = (id) => {
   }
 }
 
-export const fetchGallery = () => {
-  let response = axios.get(`${URL}/galleries/4`).then(response => response.data)
+export const fetchGallery = (id) => {
+  let response = axios.get(`${URL}/galleries/${id}`).then(response => response.data)
   return {
     type: 'FETCH_GALLERY',
     payload: response
