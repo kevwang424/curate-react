@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchUserGalleries } from '../actions'
+import { fetchUserGalleries, fetchGallery } from '../actions'
 import { bindActionCreators } from 'redux'
 
 class GalleryIndex extends Component {
@@ -9,12 +9,17 @@ class GalleryIndex extends Component {
     this.props.fetchUserGalleries()
 
   }
+
+  handleOnClick(galleryId){
+    this.props.fetchGallery(galleryId)
+  }
+
   render () {
     const {galleryIndex} = this.props
     const currentUserGalleries = galleryIndex.filter(g => g.user_id === 1)
     const galleryList = (gallery) => {
       return (
-        <li key={gallery.id}> {gallery.name} </li>
+        <li key={gallery.id} onClick={this.handleOnClick.bind(this, gallery.id)}> {gallery.name} </li>
       )
     }
 
@@ -41,7 +46,7 @@ function mapStateToProps(state) {
 
 
 function mapDispatchToProps(dispatch){
-  return bindActionCreators({fetchUserGalleries}, dispatch)
+  return bindActionCreators({fetchUserGalleries, fetchGallery}, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(GalleryIndex)
