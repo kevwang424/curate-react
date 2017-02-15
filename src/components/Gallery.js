@@ -14,11 +14,12 @@ class Gallery extends Component{
     const {gallery} = this.props
 
     if (!gallery.piece_ids) {
-      return <div>loading</div>
+      return <div> gallery loading</div>
       }
     else {
     return(
       <div>
+        <h1>Gallery Component</h1>
         <h1>{gallery.name}</h1>
         <h1>{gallery.description}</h1>
         {gallery.piece_ids.map( piece_id => <Piece key={piece_id} id={piece_id} />)}
@@ -31,7 +32,6 @@ class Gallery extends Component{
 function mapStateToProps(state){
   return {
     gallery: state.gallery
-
   }
 }
 

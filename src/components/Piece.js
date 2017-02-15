@@ -28,6 +28,7 @@ class Piece extends Component{
 
 function mapStateToProps(state, ownProps) {
   const currentPiece = state.piece.find(p => ownProps.id === p.id)
+
   return {
     piece: currentPiece
   }
