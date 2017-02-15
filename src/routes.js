@@ -2,7 +2,7 @@ import React from 'react'
 import {Route, IndexRoute} from 'react-router'
 
 import App from './components/App'
-import UserSignUp from './components/user-sign-up'
+import UserSignUp from './components/UserSignUp'
 import Auth from './auth/authenticator'
 
 export default (
