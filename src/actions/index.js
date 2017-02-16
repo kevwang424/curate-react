@@ -8,6 +8,7 @@ axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
 export const createUser = (user) => {
   let response = axios.post(URL + 'signup', user).then((userData) => {
     sessionStorage.setItem("jwt", userData.data.jwt)
+    axios.defaults.headers.common['AUTHORIZATION'] = userData.data.jwt
     browserHistory.push("/")
     return userData
   })
@@ -43,17 +44,19 @@ export const fetchUserGalleries = () => {
 }
 
 export const createSession = (loginParams) => {
-  let response = axios.post(`${URL}/sessions`, loginParams).then((response) => {
-    console.log(response)
+  let response = axios.post(`${URL}/login`, loginParams).then((response) => {
     sessionStorage.setItem('jwt', response.data.jwt)
-    browserHistory.push('/')
-    return { email: response.data.email }
+    axios.defaults.headers.common['AUTHORIZATION'] = response.data.jwt
+    browserHistory.push('/user')
   })
+  return {
+    type: 'CREATE_SESSION',
+    payload: 'hey'
+  }
 }
 
-export const assignUser = (loginParams) => {
-  return {
-    type: 'ASSIGN_USER',
-    payload: loginParams
-  }
+export const destroySession = () => {
+    sessionStorage.removeItem('jwt')
+    axios.defaults.headers.common['AUTHORIZATION'] = null
+    browserHistory.push('/')
 }

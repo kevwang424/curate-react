@@ -9,6 +9,7 @@ class GalleryIndex extends Component {
     this.props.fetchUserGalleries()
   }
 
+
   handleOnClick(galleryId){
     this.props.fetchGallery(galleryId)
   }

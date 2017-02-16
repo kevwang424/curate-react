@@ -3,26 +3,40 @@ import UserSignUp from './UserSignUp'
 import Login from './Login'
 import logo from '../logo.svg'
 import '../App.css'
-
+import Welcome from './Welcome'
+import { isLoggedIn } from '../auth/authenticator'
 import User from './User'
-import Gallery from './Gallery'
+import { connect } from 'react-redux'
 
 
 class App extends Component {
-  render() {
+  // static hello = 'thisisntgointowork.. i make things up..it worked'
+
+  render(){
+    let loggedIn = null
+      if(!isLoggedIn()){
+        loggedIn = <Welcome/>
+    }
+
     return (
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>It Do Curate</h2>
         </div>
-        <UserSignUp />
-        <Login />
-        <User />
-        <Gallery/>
+          <div>
+            {loggedIn}
+            {this.props.children}
+        </div>
       </div>
     )
   }
 }
 
-export default App
+function mapStateToProps(state){
+  return{
+    user: state.user
+  }
+}
+
+export default connect (mapStateToProps)(App)
