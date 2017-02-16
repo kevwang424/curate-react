@@ -2,10 +2,13 @@ import axios from 'axios'
 import { browserHistory } from 'react-router'
 
 const URL = 'http://localhost:3000/api/v1'
+axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
+
 
 export const createUser = (user) => {
   let response = axios.post(URL + 'signup', user).then((userData) => {
     sessionStorage.setItem("jwt", userData.data.jwt)
+    axios.defaults.headers.common['AUTHORIZATION'] = userData.data.jwt
     browserHistory.push("/")
     return userData
   })
@@ -41,10 +44,19 @@ export const fetchUserGalleries = () => {
 }
 
 export const createSession = (loginParams) => {
-  console.log(loginParams)
-  let response = axios.post(`${URL}/sessions`, loginParams).then((response) => {
+  let response = axios.post(`${URL}/login`, loginParams).then((response) => {
     sessionStorage.setItem('jwt', response.data.jwt)
-    browserHistory.push('/')
-    return { email: response.data.email }
+    axios.defaults.headers.common['AUTHORIZATION'] = response.data.jwt
+    browserHistory.push('/user')
   })
+  return {
+    type: 'CREATE_SESSION',
+    payload: 'hey'
+  }
+}
+
+export const destroySession = () => {
+    sessionStorage.removeItem('jwt')
+    axios.defaults.headers.common['AUTHORIZATION'] = null
+    browserHistory.push('/')
 }

@@ -1,21 +1,21 @@
 import React from 'react'
-import {Route, IndexRoute} from 'react-router'
+import { Route, IndexRoute, browserHistory, Router } from 'react-router'
+import {authenticate} from './auth/authenticator'
 
 import App from './components/App'
+import Welcome from './components/Welcome'
 import UserSignUp from './components/UserSignUp'
-import Auth from './auth/authenticator'
+import Login from './components/Login'
+import User from './components/User'
+import Gallery from './components/Gallery'
+
 
 export default (
-  <Route path='/' component={App} >
-    <Route path='signup' component={UserSignUp} />
-  </Route>
+  <Router history={browserHistory}>
+    <Route path='/' component={App}>
+      <Route path='/user' component={User} onEnter={authenticate}/>
+      <Route path='signup' component={UserSignUp}/>
+      <Route path='login' component={Login}/>
+    </Route>
+  </Router>
 )
-
-function requireAuth(nextState, replace) {
-  if (!Auth.loggedIn()) {
-    replace({
-      pathname: '/login',
-      state: { nextPathname: nextState.location.pathname }
-    })
-  }
-}

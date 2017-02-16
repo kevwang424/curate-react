@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { createSession } from '../actions'
 import { connect } from 'react-redux'
-// import { Link } from 'react-router'
+
 
 class Login extends Component {
   constructor() {
@@ -27,7 +27,6 @@ class Login extends Component {
     this.setState(newState)
   }
 
-
   render(){
     return(
       <div>
@@ -40,6 +39,7 @@ class Login extends Component {
     )
   }
 }
+
 
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({createSession}, dispatch)

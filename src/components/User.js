@@ -6,13 +6,12 @@ import GalleryIndex from './GalleryIndex'
 import { fetchUserGalleries } from '../actions'
 
 class User extends Component{
-
-
   render(){
     return(
       <div>
         <h1>User component</h1>
         <GalleryIndex />
+        <Gallery />
     </div>
     )
   }
@@ -20,7 +19,6 @@ class User extends Component{
 
 
 function mapStateToProps(state, ownProps) {
-
   return {
     user: state.user
   }
