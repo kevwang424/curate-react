@@ -1,6 +1,15 @@
-class Auth {
-  static loggedIn() {
-    return !!sessionStorage.jwt
+import { browserHistory } from 'react-router'
+
+export const authenticate = () => {
+  if(!sessionStorage.getItem('jwt')){
+    browserHistory.push('/login')
   }
 }
-export default Auth
+
+export const isLoggedIn = () => {
+  if(!!sessionStorage.getItem('jwt')){
+    return true
+  } else {
+    return false
+  }
+}
