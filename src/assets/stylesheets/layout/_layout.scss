@@ -1,10 +1,8 @@
 body {
-  background-color: whitesmoke;
+  background-color: $pink-light;
+  background: url('../images/yoko.gif') no-repeat center;
+  background-size: cover;
   margin: 0;
   padding: 0;
-  font-family: $font-serif;
-}
-
-#container {
-  diplay: flex;
+  font-family: sans-serif;
 }
