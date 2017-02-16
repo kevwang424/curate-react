@@ -6,7 +6,7 @@ import rootReducer from './reducers/root-reducer'
 import ReduxPromise from 'redux-promise'
 import { Router, browserHistory } from 'react-router'
 import routes from './routes'
-import './index.css'
+import './stylesheets/index.scss'
 
 const store = applyMiddleware(ReduxPromise)(createStore)(rootReducer)
 

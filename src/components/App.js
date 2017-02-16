@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import UserSignUp from './UserSignUp'
 import Login from './Login'
 import logo from '../logo.svg'
-import '../App.css'
+// import './stylesheets/App.scss'
 
 import User from './User'
 import Gallery from './Gallery'
