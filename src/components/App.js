@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import UserSignUp from './UserSignUp'
 import Login from './Login'
 import logo from '../assets/images/koolaid.png'
-import '../App.css'
+
 import Welcome from './Welcome'
 import { isLoggedIn } from '../auth/authenticator'
 import User from './User'
