@@ -2,6 +2,8 @@ import axios from 'axios'
 import { browserHistory } from 'react-router'
 
 const URL = 'http://localhost:3000/api/v1'
+axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
+
 
 export const createUser = (user) => {
   let response = axios.post(URL + 'signup', user).then((userData) => {
@@ -41,10 +43,17 @@ export const fetchUserGalleries = () => {
 }
 
 export const createSession = (loginParams) => {
-  console.log(loginParams)
   let response = axios.post(`${URL}/sessions`, loginParams).then((response) => {
+    console.log(response)
     sessionStorage.setItem('jwt', response.data.jwt)
     browserHistory.push('/')
     return { email: response.data.email }
   })
+}
+
+export const assignUser = (loginParams) => {
+  return {
+    type: 'ASSIGN_USER',
+    payload: loginParams
+  }
 }

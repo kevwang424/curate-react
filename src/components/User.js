@@ -20,7 +20,6 @@ class User extends Component{
 
 
 function mapStateToProps(state, ownProps) {
-
   return {
     user: state.user
   }

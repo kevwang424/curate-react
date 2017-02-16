@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
-import { createSession } from '../actions'
+import { createSession, fetchUserGalleries, assignUser } from '../actions'
 import { connect } from 'react-redux'
 // import { Link } from 'react-router'
 
@@ -17,7 +17,8 @@ class Login extends Component {
 
   handleSubmit(event) {
     event.preventDefault()
-    this.props.createSession(this.state)
+    const response = this.props.createSession(this.state)
+    this.props.assignUser(response)
     this.refs.this_form.reset()
   }
 
@@ -41,8 +42,14 @@ class Login extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({createSession}, dispatch)
+function mapStateToProps(state){
+  return {
+    user: state.user
+  }
 }
 
-export default connect(null, mapDispatchToProps)(Login)
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({createSession, fetchUserGalleries, assignUser}, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login)
