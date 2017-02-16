@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import UserSignUp from './UserSignUp'
 import Login from './Login'
-import logo from '../logo.svg'
+import logo from '../assets/images/koolaid.png'
 import '../App.css'
 import Welcome from './Welcome'
 import { isLoggedIn } from '../auth/authenticator'
@@ -19,11 +19,11 @@ class App extends Component {
     }
 
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>It Do Curate</h2>
-        </div>
+        <div className="App">
+          <div className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+            <h2>It Do Curate</h2>
+          </div>
           <div>
             {loggedIn}
             {this.props.children}
