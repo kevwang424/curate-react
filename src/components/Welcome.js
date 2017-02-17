@@ -8,10 +8,14 @@ export default function Welcome(){
   return(
     <div>
       <h1>Welcome to IT DO CURATE!</h1>
-      <Link to='/login'>Login</Link><br/>
-      <Link to='/signup'>Sign Up!</Link>
-      <br/><br/>
-      <img src={loading} className="loading" alt="spinner" />
+      <div className='nav flex-container__item'>
+        <ul>
+          <li><Link to='/login'>Login</Link></li>
+          <li><Link to='/signup'>Sign Up!</Link></li>
+        </ul>
+        <img src={loading} className="loading" alt="spinner" />
+      </div>
+
     </div>
   )
 }

@@ -17,10 +17,10 @@ class App extends Component {
     }
 
     return (
-        <div className="App">
-          <div className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h2>It Do Curate</h2>
+        <div className="flex-container">
+          <div className="header">
+            <img src={logo} className="header__logo" alt="logo" />
+            <h1>It Do Curate</h1>
           </div>
           <div>
             {loggedIn}

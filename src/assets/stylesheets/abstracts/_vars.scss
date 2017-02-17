@@ -1,17 +1,20 @@
-$nav-height: 64px;
-$font-serif: serif;
+///typeface
 
-/// Regular font family
-/// @type List
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-sans: 'Palanquin', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
-/// Code (monospace) font family
-/// @type List
-$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
-// colors
+$text-font-serif: 'Playfair Display', serif;
 
-$pink-light: #fff4f4;
-$pink: #ffb6c1;
+$code-font-stack: 'Inconsolata', monospace;
+
+//button color
+$button-default: #111;
+$button-hover: #7fdbff;
+$button-active: #0074d9;
+
+//colors
+$bg-color: #f0f8ff;
+$pink-light: #fff0f5;
+$pink: #ffe4e1;
 $lavender: #d8bfd8;
 $chartreuse: #7fff00;
 $purple-light: #ce93d8;
