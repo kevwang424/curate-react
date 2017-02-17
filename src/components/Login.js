@@ -29,11 +29,11 @@ class Login extends Component {
 
   render(){
     return(
-      <div>
+      <div className="good-form">
         <form onSubmit={this.handleSubmit} ref="this_form">
           <input name="email" ref="email" placeholder="Enter Email" value={this.state.email} onChange={this.handleChange}/>
           <input name="password" type="password" ref="userPassword" placeholder="Enter Password" value={this.state.password} onChange={this.handleChange}/>
-          <button type="submit">Log In</button>
+          <button type="submit" className="btn">Log In</button>
         </form>
       </div>
     )

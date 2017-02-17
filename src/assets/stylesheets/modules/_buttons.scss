@@ -1,0 +1,86 @@
+//fancy buttons!
+
+.btn,
+.btn:link,
+.btn:visited {
+  border-radius: 0.25em;
+  border-style: solid;
+  border-width: 1px;
+  background-color: $white;
+  color: $button-default;
+  display: inline-block;
+  font-family: 'Helvetica Neue';
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 400ms, background-color 400ms, border 400ms;
+}
+
+.btn:hover,
+.btn:focus {
+  color: $button-hover;
+  border: 1px solid $button-hover;
+  transition: background-color 300ms, color 300ms, border 300ms;
+}
+
+.btn:active {
+  color: $button-active;
+  border: 1px solid $button-active;
+  transition: background-color 300ms, color 300ms, border 300ms;
+}
+
+//button size
+
+.btn--s {
+  font-size: 14px;
+}
+
+.btn--m {
+  font-size: 16px;
+}
+
+.btn--l {
+  font-size: 20px;
+  border-radius: 0.25em !important;
+}
+
+
+//responsive buttons
+
+.btn--full,
+.btn--full:link {
+  border-radius: 0.25em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 100%;
+}
+
+//pink button
+
+.btn--pink,
+.btn--pink:link,
+.btn--pink:visited {
+  color: $black;
+  background-color: $pink;
+  border-color: $pink;
+}
+
+.btn--pink:hover,
+.btn--pink:focus {
+  color: $black;
+  background-color: $pink-light;
+  border-color: $pink-light;
+}
+
+
+//mobile
+
+@media screen and (min-width: 32em) {
+  .btn--full {
+    max-width: 16em !important;
+  }
+}

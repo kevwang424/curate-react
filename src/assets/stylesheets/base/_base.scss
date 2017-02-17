@@ -11,7 +11,9 @@ html {
  * making all elements inheriting from the root box-sizing value
  * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
  */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -19,8 +21,16 @@ html {
  * Basic styles for links
  */
 a {
-
   text-decoration: none;
+  color: $chartreuse;
+  transition: color 400ms;
+}
 
+a:hover {
+  color: $periwinkle;
+  transition: color 300ms;
+}
 
+ul {
+  list-style: none;
 }
