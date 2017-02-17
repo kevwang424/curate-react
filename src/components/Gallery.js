@@ -3,6 +3,7 @@ import Piece from './Piece'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { fetchGallery } from '../actions'
+import loading from '../assets/images/koolaid.png'
 
 class Gallery extends Component{
 
@@ -14,7 +15,7 @@ class Gallery extends Component{
     const {gallery} = this.props
 
     if (!gallery.piece_ids) {
-      return <div> gallery loading</div>
+      return <div>loading gallery<img src={loading} className="loading" alt="spinner" /></div>
       }
     else {
     return(
