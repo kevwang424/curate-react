@@ -60,3 +60,13 @@ export const destroySession = () => {
     axios.defaults.headers.common['AUTHORIZATION'] = null
     browserHistory.push('/')
 }
+
+export const searchAPI = (perPage) => {
+  let response = axios.get(`http://api.harvardartmuseums.org/object?apikey=48d94c00-f18a-11e6-89ba-839d228fa55c&size=${perPage}&hasimage=1`).then(result => result.data.records)
+
+  return {
+    type: 'API_RESULTS',
+    payload: response
+  }
+
+}
