@@ -1,0 +1,3 @@
+@function image($path, $base: $base-url) {
+  @return asset($base, 'images/', $path);
+}
