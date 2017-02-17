@@ -40,7 +40,7 @@ class Search extends Component {
             <option value="50">50</option>
             <option value="100">100</option>
           </select>
-          <input type="text" value={this.state.search} onChange={this.handleChange} name="search" placeholder="Search"/>
+            <input type="text" value={this.state.search} onChange={this.handleChange} name="search" placeholder="Search"/>
           <input type="button" value="Search" onClick={this.handleSubmit}/>
         </form>
       </div>
