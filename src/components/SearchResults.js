@@ -8,7 +8,7 @@ class SearchResults extends React.Component{
     return (
       <div>
         <ul>
-          {this.props.apiSearchResults.map( piece => <li key={piece.id} ><SearchPiece details={piece}/></li>)}
+          {this.props.apiSearchResults.map( piece => <li key={piece.id} ><SearchPiece details={piece} gallery={this.props.gallery}/></li>)}
         </ul>
       </div>
     )

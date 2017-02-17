@@ -5,15 +5,11 @@ import Gallery from './Gallery'
 import CreateGallery from './CreateGallery'
 import GalleryIndex from './GalleryIndex'
 import { fetchUserGalleries } from '../actions'
-import Search from './Search'
-import SearchResults from './SearchResults'
 
 class User extends Component{
   render(){
     return(
       <div>
-        < Search />
-        < SearchResults />
         <h1>User component</h1>
         <GalleryIndex />
         <CreateGallery />
