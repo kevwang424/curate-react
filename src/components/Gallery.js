@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { fetchGallery } from '../actions'
 import loading from '../assets/images/koolaid.png'
+import Search from './Search'
+import SearchResults from './SearchResults'
 
 class Gallery extends Component{
 
@@ -26,6 +28,8 @@ class Gallery extends Component{
         <div className="gallery__frame">
           {gallery.piece_ids.map( piece_id => <Piece key={piece_id} id={piece_id} />)}
         </div>
+        < Search />
+        < SearchResults gallery={gallery.id}/>
     </div>
     )
   }
