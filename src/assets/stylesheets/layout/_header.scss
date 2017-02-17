@@ -6,6 +6,11 @@
   text-align: center;
 }
 
+.header__img {
+  height: 150px;
+  position: absolute;
+}
+
 .header__logo {
   animation: logo-spin infinite 2500ms linear;
   height: 80px;

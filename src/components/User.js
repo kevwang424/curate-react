@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import Gallery from './Gallery'
+import CreateGallery from './CreateGallery'
 import GalleryIndex from './GalleryIndex'
 import { fetchUserGalleries } from '../actions'
 
@@ -11,6 +12,7 @@ class User extends Component{
       <div>
         <h1>User component</h1>
         <GalleryIndex />
+        <CreateGallery />
         <Gallery />
     </div>
     )
