@@ -17,8 +17,8 @@ class Piece extends Component{
     if (piece){
     return(
       <div>
-      <h1>{piece.title}</h1>
-      <img src={piece.image_url} alt={piece.title} />
+      <h1>Title: {piece.title}</h1>
+      <img src={piece.image_url} alt={piece.title}/>
     </div>
     )
   } else {
@@ -29,14 +29,13 @@ class Piece extends Component{
 
 function mapStateToProps(state, ownProps) {
   const currentPiece = state.piece.find(p => ownProps.id === p.id)
-
   return {
     piece: currentPiece
   }
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({fetchPiece}, dispatch)
+  return bindActionCreators({ fetchPiece }, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Piece)

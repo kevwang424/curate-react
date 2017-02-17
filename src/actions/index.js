@@ -67,6 +67,7 @@ export const searchAPI = (perPage) => {
     type: 'API_RESULTS',
     payload: response
   }
+
 }
 
 export const createGallery = (params) => {
@@ -84,4 +85,5 @@ export const addPieceToDb = (newPiece) => {
     type: 'ADD_PIECE_TO_GALLERY',
     payload: response
   }
+
 }
