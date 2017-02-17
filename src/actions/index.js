@@ -68,5 +68,13 @@ export const searchAPI = (perPage) => {
     type: 'API_RESULTS',
     payload: response
   }
+}
 
+export const createGallery = (params) => {
+  let response = axios.post(URL + '/galleries', params).then(response => response.data)
+  browserHistory.push('/edit')
+  return {
+    type: 'CREATE_GALLERY',
+    payload: response
+  }
 }
