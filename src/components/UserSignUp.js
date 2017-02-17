@@ -25,14 +25,14 @@ class UserSignUp extends Component {
 
   render(){
     return(
-      <div>
+      <div className="good-form flex-container__item">
         <form onSubmit={this.handleSubmit} ref="this_form">
           <input ref="first_name" placeholder="Enter First Name"/>
           <input ref="last_name" placeholder="Enter Last Name"/>
           <input ref="email" placeholder="Enter Email"/>
           <input type="password" ref="userPassword" placeholder="Enter Password" />
           <input type="password" ref="passwordConfirmation" placeholder="Verify Password" />
-          <button type="submit">Submit</button>
+          <button type="submit" className="btn">Submit</button>
         </form>
       </div>
     )

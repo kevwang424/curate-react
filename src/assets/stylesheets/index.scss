@@ -1,8 +1,22 @@
-@import 'global/_vars.scss';
-@import 'global/_typography.scss';
+@charset 'utf-8';
 
-@import 'layout/_layout.scss';
+@import 'abstracts/vars';
+@import 'abstracts/functions';
 
-@import 'grid/_flex-grid.scss';
+@import 'base/base';
+@import 'base/fonts';
+@import 'base/typography';
 
-@import 'components/_app.scss';
+@import 'layout/flex-container';
+@import 'layout/header';
+@import 'layout/nav';
+@import 'layout/sidebar';
+@import 'layout/forms';
+@import 'layout/footer';
+@import 'layout/layout';
+
+@import 'modules/buttons';
+@import 'modules/loader';
+
+@import 'pages/welcome';
+@import 'pages/gallery';

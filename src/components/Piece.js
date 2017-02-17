@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { fetchPiece } from '../actions'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import loading from '../assets/images/koolaid.png'
 
 
 class Piece extends Component{
@@ -21,7 +22,7 @@ class Piece extends Component{
     </div>
     )
   } else {
-    return <div>Loading</div>
+    return <div><img src={loading} className="loading" alt="spinner" /></div>
   }
   }
 }

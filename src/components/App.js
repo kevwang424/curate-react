@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
-import UserSignUp from './UserSignUp'
-import Login from './Login'
 import logo from '../assets/images/koolaid.png'
 
 import Welcome from './Welcome'
 import { isLoggedIn } from '../auth/authenticator'
-import User from './User'
+
 import { connect } from 'react-redux'
 
 
@@ -19,11 +17,11 @@ class App extends Component {
     }
 
     return (
-        <div className="App">
-          <div className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h2>It Do Curate</h2>
-          </div>
+        <div className="flex-container">
+          <header className="header">
+            <img src={logo} className="header__logo" alt="logo" />
+            <h1>It Do Curate</h1>
+          </header>
           <div>
             {loggedIn}
             {this.props.children}
