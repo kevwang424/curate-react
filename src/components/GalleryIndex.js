@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchUserGalleries, fetchGallery } from '../actions'
 import { bindActionCreators } from 'redux'
+import loading from '../assets/images/koolaid.png'
 
 class GalleryIndex extends Component {
 
@@ -23,7 +24,7 @@ class GalleryIndex extends Component {
     }
 
     if (!galleryIndex) {
-      return <div>loading gallery list</div>
+      return <div>loading gallery list <img src={loading} className="loading" alt="spinner" /> </div>
     } else {
       return (
         <div>
