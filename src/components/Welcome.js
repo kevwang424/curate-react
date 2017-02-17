@@ -6,7 +6,7 @@ import loading from '../assets/images/koolaid.png'
 
 export default function Welcome(){
   return(
-    <div>
+    <div className="welcome">
       <h1>Welcome to IT DO CURATE!</h1>
       <nav className='nav flex-container__item'>
         <ul>

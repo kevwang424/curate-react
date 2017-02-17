@@ -19,11 +19,13 @@ class Gallery extends Component{
       }
     else {
     return(
-      <div>
+      <div className="gallery">
         <h1>Gallery Component</h1>
         <h1>{gallery.name}</h1>
         <h1>{gallery.description}</h1>
-        {gallery.piece_ids.map( piece_id => <Piece key={piece_id} id={piece_id} />)}
+        <div className="gallery__frame">
+          {gallery.piece_ids.map( piece_id => <Piece key={piece_id} id={piece_id} />)}
+        </div>
     </div>
     )
   }
