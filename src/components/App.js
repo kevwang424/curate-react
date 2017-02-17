@@ -18,10 +18,10 @@ class App extends Component {
 
     return (
         <div className="flex-container">
-          <div className="header">
+          <header className="header">
             <img src={logo} className="header__logo" alt="logo" />
             <h1>It Do Curate</h1>
-          </div>
+          </header>
           <div>
             {loggedIn}
             {this.props.children}
