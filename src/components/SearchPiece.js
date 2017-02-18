@@ -59,8 +59,6 @@ class SearchPiece extends Component {
             <img src={details.primaryimageurl}
               onClick={this.closeModal.bind(this)}/></Modal>
           <img src={details.primaryimageurl} onClick={this.handleClick.bind(this)}/>
-          <h4> Artist: {details.people[0].name ? details.people[0].name : "Artist Not Listed"} </h4>
-          <img src={details.primaryimageurl}/>
           <h4> Artist: {details.people[0].name ? details.people[0].name : "Not Listed"} </h4>
           <h4>Century: {details.century}</h4>
           <h4>Classification: {details.classification}</h4>
