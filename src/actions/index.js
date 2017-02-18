@@ -6,10 +6,11 @@ axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
 
 
 export const createUser = (user) => {
-  let response = axios.post(URL + 'signup', user).then((userData) => {
+  let response = axios.post(URL + '/signup', user).then((userData) => {
     sessionStorage.setItem("jwt", userData.data.jwt)
     axios.defaults.headers.common['AUTHORIZATION'] = userData.data.jwt
-    browserHistory.push("/")
+    browserHistory.push("/user")
+
     return userData
   })
 
