@@ -4,12 +4,14 @@ import { bindActionCreators } from 'redux'
 import Gallery from './Gallery'
 import CreateGallery from './CreateGallery'
 import GalleryIndex from './GalleryIndex'
+import Logout from './Logout'
 import { fetchUserGalleries } from '../actions'
 
 class User extends Component{
   render(){
     return(
       <div>
+        <Logout />
         <h1>User component</h1>
         <GalleryIndex />
         <CreateGallery />
