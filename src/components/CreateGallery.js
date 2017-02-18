@@ -13,7 +13,9 @@ class CreateGallery extends Component {
       description: this.refs.description.value,
     }
     this.props.createGallery(gallery)
+    this.refs.this_form.reset()
   }
+
   render(){
     return(
       <div>
@@ -21,7 +23,7 @@ class CreateGallery extends Component {
         <h2>Please name your gallery and add an optional description</h2>
         <div className="flex-container__item">
           <div className="good-form">
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit} ref="this_form">
               <input type="text" placeholder="New Gallery Name" ref="name" />
               <textarea placeholder="Write a description (optional)" ref="description" />
               <button type="submit" className="btn">Create Gallery</button>
@@ -33,14 +35,9 @@ class CreateGallery extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    createGallery: state.createGallery
-  }
-}
 
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({createGallery}, dispatch)
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CreateGallery)
+export default connect(null, mapDispatchToProps)(CreateGallery)

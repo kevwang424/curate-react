@@ -17,6 +17,7 @@ class GalleryIndex extends Component {
 
   render () {
     const {galleryIndex} = this.props
+
     const galleryList = (gallery) => {
       return (
         <li key={gallery.id} onClick={this.handleOnClick.bind(this, gallery.id)}> {gallery.name} </li>
@@ -28,7 +29,7 @@ class GalleryIndex extends Component {
     } else {
       return (
         <div>
-          <h1>Gallery List</h1>
+          <h1>Gallery Index List</h1>
             <ul>
               {galleryIndex.map(galleryList)}
             </ul>

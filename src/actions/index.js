@@ -44,21 +44,24 @@ export const fetchUserGalleries = () => {
 }
 
 export const createSession = (loginParams) => {
-  let response = axios.post(`${URL}/login`, loginParams).then((response) => {
+  axios.post(`${URL}/login`, loginParams).then((response) => {
     sessionStorage.setItem('jwt', response.data.jwt)
     axios.defaults.headers.common['AUTHORIZATION'] = response.data.jwt
     browserHistory.push('/user')
   })
   return {
-    type: 'CREATE_SESSION',
-    payload: 'hey'
+    type: 'CREATE_SESSION'
   }
 }
 
 export const destroySession = () => {
-    sessionStorage.removeItem('jwt')
-    axios.defaults.headers.common['AUTHORIZATION'] = null
-    browserHistory.push('/')
+  sessionStorage.removeItem('jwt')
+  axios.defaults.headers.common['AUTHORIZATION'] = null
+  browserHistory.push('/')
+  return {
+    type: 'DESTROY_SESSION'
+  }
+
 }
 
 export const searchAPI = (perPage) => {
@@ -72,7 +75,7 @@ export const searchAPI = (perPage) => {
 
 export const createGallery = (params) => {
   let response = axios.post(URL + '/galleries', params).then(response => response.data)
-  browserHistory.push('/edit')
+  browserHistory.push('/user')
   return {
     type: 'CREATE_GALLERY',
     payload: response
