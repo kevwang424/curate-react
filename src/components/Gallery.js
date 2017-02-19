@@ -7,15 +7,16 @@ import loading from '../assets/images/koolaid.png'
 import Search from './Search'
 import SearchResults from './SearchResults'
 
+
 class Gallery extends Component{
 
   componentDidMount(){
     this.props.fetchGallery()
   }
 
+
   render(){
     const {gallery} = this.props
-
     if (!gallery.piece_ids) {
       return <div>loading gallery<img src={loading} className="loading" alt="spinner" /></div>
       }
@@ -25,9 +26,7 @@ class Gallery extends Component{
         <h1>Gallery Component</h1>
         <h1>{gallery.name}</h1>
         <h1>{gallery.description}</h1>
-        <div className="gallery__frame">
           {gallery.piece_ids.map( piece_id => <Piece key={piece_id} id={piece_id} />)}
-        </div>
         < Search />
         < SearchResults gallery={gallery.id}/>
     </div>

@@ -8,7 +8,6 @@ import { connect } from 'react-redux'
 
 
 class App extends Component {
-  // static hello = 'thisisntgointowork.. i make things up..it worked'
 
   render(){
     let loggedIn = null

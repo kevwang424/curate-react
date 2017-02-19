@@ -89,5 +89,13 @@ export const addPieceToDb = (newPiece) => {
     type: 'ADD_PIECE_TO_GALLERY',
     payload: response
   }
-
 }
+
+export const fetchSinglePiece = () => {
+  let response = axios.get(`${URL}/pieces/1`).then(response => response.data)
+  return {
+    type: 'FETCH_SINGLE_PIECE',
+    payload: response
+  }
+}
+//fetch single piece to show hard coded for now -> piece-reducer
