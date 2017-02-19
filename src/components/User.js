@@ -2,21 +2,22 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import Gallery from './Gallery'
-import CreateGallery from './CreateGallery'
-import GalleryIndex from './GalleryIndex'
-import Logout from './Logout'
+import Nav from './Nav'
 import { fetchUserGalleries } from '../actions'
 
 class User extends Component{
   render(){
     return(
       <div>
-        <Logout />
-        <h1>User component</h1>
-        <GalleryIndex />
-        <CreateGallery />
-        <Gallery />
-    </div>
+        <div className="row">
+          <div className="col-lg-4 col-xs-12">
+            <Nav />
+          </div>
+          <div className="col-lg-8 col-xs-12">
+            <Gallery />
+          </div>
+        </div>
+      </div>
     )
   }
 }
