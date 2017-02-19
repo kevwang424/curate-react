@@ -1,17 +1,24 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router'
+import GalleryIndex from './GalleryIndex'
+import CreateGallery from './CreateGallery'
+import Logout from './Logout'
 
 class Nav extends Component {
-
   render(){
     return(
       <div>
-        <h1>Nav Bar for logout</h1>
+        <div className="nav">
+          <ul>
+            <li><GalleryIndex /></li>
+            <li><CreateGallery /></li>
+            <li><Logout /></li>
+          </ul>
+        </div>
       </div>
     )
   }
 }
 
-
-
-export default connect(Nav)
+export default connect()(Nav)

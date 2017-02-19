@@ -20,19 +20,20 @@ class GalleryIndex extends Component {
 
     const galleryList = (gallery) => {
       return (
-        <li key={gallery.id} onClick={this.handleOnClick.bind(this, gallery.id)}> {gallery.name} </li>
+        <li key={gallery.id} onClick={this.handleOnClick.bind(this, gallery.id)}><a>{gallery.name}</a></li>
       )
     }
 
     if (!galleryIndex) {
-      return <div>loading gallery list <img src={loading} className="loading" alt="spinner" /> </div>
+      return <div>loading<img src={loading} className="loading" alt="spinner" /> </div>
     } else {
       return (
         <div>
-          <h1>Gallery Index List</h1>
+          <div className="nav">
             <ul>
               {galleryIndex.map(galleryList)}
             </ul>
+          </div>
         </div>
       )
     }

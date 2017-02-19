@@ -12,7 +12,7 @@ class SearchPiece extends Component {
     this.state = {modalIsOpen: false}
   }
 
-  addToGallery(event){
+  addToGallery (event){
     event.preventDefault()
 
     const pieceInfo = {
@@ -52,7 +52,7 @@ class SearchPiece extends Component {
     const { details } = this.props
 
     return(
-      <div >
+      <div>
         <form>
           <h1>Title: {details.title}</h1>
           <Modal isOpen={this.state.modalIsOpen}>
@@ -63,7 +63,7 @@ class SearchPiece extends Component {
           <h4>Century: {details.century}</h4>
           <h4>Classification: {details.classification}</h4>
           <h4> Dimensions: {details.dimensions ? details.dimensions : "Not Found"}</h4>
-          <input type="button" value="Add To Gallery" onClick={this.addToGallery.bind(this)}/>
+          <button type="submit" className="btn" onClick={this.addToGallery.bind(this)}> Add to Gallery </button>
         </form>
       </div>
     )

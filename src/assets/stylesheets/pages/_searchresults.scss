@@ -1,5 +1,5 @@
 .browse-module {
-  margin: 50px 0 50px;
+  margin: 50px 0;
 }
 
 .browse-module__form-filters {
@@ -13,22 +13,22 @@
 }
 
 .browse-module__input-text {
-    height: 73px;
-    padding-right: 70px;
-    font-size: 20px;
-    line-height: 37px;
-    text-overflow: ellipsis;
+  height: 73px;
+  padding-right: 70px;
+  font-size: 20px;
+  line-height: 37px;
+  text-overflow: ellipsis;
 }
 
 .filter-component {
-    position: relative;
-    padding-top: 13px;
-    padding-bottom: 68px;
-    color: #3d3d3d;
-    font-family: "Playfair Display", serif;
-    font-size: 16px/25px;
+  position: relative;
+  padding-top: 13px;
+  padding-bottom: 68px;
+  color: #3d3d3d;
+  font-family: "Playfair Display", serif;
+  font-size: 16px/25px;
 }
 
 .filter-component__parents {
-    position: relative;
+  position: relative;
 }

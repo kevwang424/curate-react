@@ -1,3 +1,13 @@
+@function calculate-rem($size) {
+  $rem-size: $size / 16px;
+  @return #{$rem-size}rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculate-rem($size);
+}
+
 @function image($path, $base: $base-url) {
   @return asset($base, 'images/', $path);
 }

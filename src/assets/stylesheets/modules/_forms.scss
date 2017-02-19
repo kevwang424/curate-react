@@ -1,35 +1,23 @@
-.good-form {
-
-  display: flex;
-  border-radius: 5px;
-  background-color: $pink;
+.form {
+  box-sizing: border-box;
+  width: 100%;
   padding: 20px;
+  border-radius: 5px;
+  background-color: $form-bg;
 }
 
 input,
 textarea {
   width: 100%;
   padding: 8px;
-  margin: 0 10px;
-  display: inline-flex;
-  border: 1px solid $lavender;
+  border: 1px solid $input-border;
   border-radius: 5px;
-  box-sizing: border-box;
 }
 
 select {
   width: 10%;
   padding: 8px;
-  display: inline-flex;
-  border: 1px solid $lavender;
+  border: 1px solid $input-border;
   background-color: $white;
   border-radius: 5px;
-  box-sizing: border-box;
-}
-
-.search-form {
-  display: flex;
-  border-radius: 5px;
-  background-color: $pink;
-  padding: 20px;
 }

@@ -1,20 +1,21 @@
 ///typeface
-
 $text-font-sans: 'Palanquin', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-
 $text-font-serif: 'Playfair Display', serif;
-
 $code-font-stack: 'Inconsolata', monospace;
 
-//button color
-$button-default: #111;
-$button-hover: #7fdbff;
-$button-active: #0074d9;
+$header-height: 150px;
+
+//media breakpoints
+$breakpoint-large: 1024px;
+$breakpoint-medium: 768px;
+$breakpoint-mobile: 480px;
 
 //colors
-$bg-color: #f0f8ff;
+$whitesmoke: #f0f8ff;
 $pink-light: #fff0f5;
 $pink: #ffe4e1;
+$blue: #7fdbff;
+$blue-dark: #0074d9;
 $lavender: #d8bfd8;
 $chartreuse: #7fff00;
 $purple-light: #ce93d8;
@@ -22,3 +23,17 @@ $periwinkle: #add8e6;
 $white: #fff;
 $black: #000;
 $grey: #444;
+$grey-light: #111;
+
+//background color
+$bg-color: $whitesmoke;
+
+//button color
+$button-default: $grey-light;
+$button-hover: $blue;
+$button-active: $blue-dark;
+$button-bg: $white;
+
+//form colors
+$form-bg: $pink;
+$input-border: $lavender;
