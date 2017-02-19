@@ -7,15 +7,16 @@
 @import 'base/fonts';
 @import 'base/typography';
 
+@import 'layout/flex-grid';
 @import 'layout/flex-container';
 @import 'layout/header';
 @import 'layout/nav';
 @import 'layout/sidebar';
-@import 'layout/forms';
 @import 'layout/footer';
 @import 'layout/layout';
 
 @import 'modules/buttons';
+@import 'modules/forms';
 @import 'modules/loader';
 
 @import 'pages/welcome';
