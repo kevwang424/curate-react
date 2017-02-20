@@ -62,7 +62,7 @@ class SearchPiece extends Component {
               <Modal className="modal-box-item--top" contentLabel='Modal'></Modal>
             </Modal>
           <img alt={details.title} src={details.primaryimageurl} onClick={this.handleClick.bind(this)}/>
-          <h4>Artist: {details.people[0].name ? details.people[0].name : "Not Listed"} </h4>
+          <h4>Artist: {details.people ? details.people[0].name : "Not Listed"} </h4>
           <h4>Century: {details.century}</h4>
           <h4>Classification: {details.classification}</h4>
           <h4> Dimensions: {details.dimensions ? details.dimensions : "Not Found"}</h4>
