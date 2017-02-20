@@ -91,11 +91,10 @@ export const addPieceToDb = (newPiece) => {
   }
 }
 
-export const fetchSinglePiece = () => {
-  let response = axios.get(`${URL}/pieces/1`).then(response => response.data)
+export const addCommentary = (commentary) => {
+  let response = axios.post(`${URL}/pieces`, commentary)
   return {
-    type: 'FETCH_SINGLE_PIECE',
+    type: 'ADD_COMMENTARY',
     payload: response
   }
 }
-//fetch single piece to show hard coded for now -> piece-reducer

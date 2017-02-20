@@ -52,12 +52,15 @@ class SearchPiece extends Component {
     const { details } = this.props
 
     return(
-      <div >
+      <div className="flex-container">
         <form>
           <h1>Title: {details.title}</h1>
-          <Modal isOpen={this.state.modalIsOpen} contentLabel='Modal'>
+          <Modal className="modal-gallery-search" isOpen={this.state.modalIsOpen} contentLabel='Modal'>
+            <Modal className="modal-box-item--top" contentLabel='Modal'></Modal>
             <img alt={details.title} src={details.primaryimageurl}
-              onClick={this.closeModal.bind(this)}/></Modal>
+              onClick={this.closeModal.bind(this)}/>
+              <Modal className="modal-box-item--top" contentLabel='Modal'></Modal>
+            </Modal>
           <img alt={details.title} src={details.primaryimageurl} onClick={this.handleClick.bind(this)}/>
           <h4>Artist: {details.people[0].name ? details.people[0].name : "Not Listed"} </h4>
           <h4>Century: {details.century}</h4>

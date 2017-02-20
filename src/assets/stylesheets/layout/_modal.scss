@@ -1,0 +1,29 @@
+.modal-user-gallery {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 50%;
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.modal-box-item--top {
+  align-self: flex-start;
+}
+
+.modal-box-item--bottom {
+  align-self: flex-end;
+}
+
+.modal-gallery-search {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 50%;
+  position: relative;
+  height: auto;
+  width: auto;
+}
