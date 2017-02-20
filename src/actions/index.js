@@ -95,5 +95,4 @@ export const removePiece = (piece, gallery) => {
     type: "REMOVE_PIECE_FROM_GALLERY",
     payload: response
   }
-
 }
