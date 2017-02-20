@@ -90,11 +90,3 @@ export const addPieceToDb = (newPiece) => {
     payload: response
   }
 }
-
-export const addCommentary = (commentary) => {
-  let response = axios.post(`${URL}/pieces`, commentary)
-  return {
-    type: 'ADD_COMMENTARY',
-    payload: response
-  }
-}

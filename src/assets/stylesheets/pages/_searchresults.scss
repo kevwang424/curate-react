@@ -1,8 +1,15 @@
-.browse-module {
+.browse-container {
+  display: grid;
   margin: 50px 0 50px;
+  grid-template-columns: $fg-columns;
+  // grid-template-columns: $fg-columns: 6 !important;
+  grid-template-rows: $fg-gutter;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
-.browse-module__form-filters {
+.browse-item {
   position: relative;
   z-index: 10;
   background: #fff;
@@ -18,17 +25,4 @@
     font-size: 20px;
     line-height: 37px;
     text-overflow: ellipsis;
-}
-
-.filter-component {
-    position: relative;
-    padding-top: 13px;
-    padding-bottom: 68px;
-    color: #3d3d3d;
-    font-family: "Playfair Display", serif;
-    font-size: 16px/25px;
-}
-
-.filter-component__parents {
-    position: relative;
 }
