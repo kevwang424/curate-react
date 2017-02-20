@@ -7,15 +7,16 @@ import loading from '../assets/images/koolaid.png'
 import Search from './Search'
 import SearchResults from './SearchResults'
 
+
 class Gallery extends Component{
 
   componentDidMount(){
     this.props.fetchGallery()
   }
 
+
   render(){
     const {gallery} = this.props
-
     if (!gallery.piece_ids) {
       return <div>loading gallery<img src={loading} className="loading" alt="spinner" /></div>
       }

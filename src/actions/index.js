@@ -89,5 +89,4 @@ export const addPieceToDb = (newPiece) => {
     type: 'ADD_PIECE_TO_GALLERY',
     payload: response
   }
-
 }
