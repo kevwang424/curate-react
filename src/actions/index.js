@@ -96,3 +96,11 @@ export const removePiece = (piece, gallery) => {
     payload: response
   }
 }
+
+export const deleteGallery = (id) => {
+  let response = axios.delete(`${URL}/galleries/${id}`).then(response => response.data)
+  return {
+    type: 'DELETE_GALLERY',
+    payload: response
+  }
+}

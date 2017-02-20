@@ -14,6 +14,8 @@ export default function(state=[], action) {
         piece_ids: action.payload.piece_ids
       })
       return removeState
+    case 'DELETE_GALLERY':
+      return action.payload
     default:
       return state
   }

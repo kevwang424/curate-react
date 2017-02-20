@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchUserGalleries, fetchGallery } from '../actions'
+import { fetchUserGalleries, fetchGallery} from '../actions'
 import { bindActionCreators } from 'redux'
 import loading from '../assets/images/koolaid.png'
 
@@ -9,7 +9,6 @@ class GalleryIndex extends Component {
   componentDidMount() {
     this.props.fetchUserGalleries()
   }
-
 
   handleOnClick(galleryId){
     this.props.fetchGallery(galleryId)
