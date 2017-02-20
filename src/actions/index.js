@@ -62,7 +62,6 @@ export const destroySession = () => {
   return {
     type: 'DESTROY_SESSION'
   }
-
 }
 
 export const searchAPI = (perPage) => {
@@ -71,7 +70,6 @@ export const searchAPI = (perPage) => {
     type: 'API_RESULTS',
     payload: response
   }
-
 }
 
 export const createGallery = (params) => {
@@ -87,6 +85,14 @@ export const addPieceToDb = (newPiece) => {
   let response = axios.post(`${URL}/pieces`, newPiece)
   return {
     type: 'ADD_PIECE_TO_GALLERY',
+    payload: response
+  }
+}
+
+export const removePiece = (piece, gallery) => {
+  let response = axios.post(`${URL}/remove`, {piece: piece, gallery_id: gallery}).then(response => response.data)
+  return {
+    type: "REMOVE_PIECE_FROM_GALLERY",
     payload: response
   }
 

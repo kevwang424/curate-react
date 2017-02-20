@@ -3,12 +3,17 @@ export default function(state=[], action) {
     case 'FETCH_GALLERY':
       return action.payload
     case 'ADD_PIECE_TO_GALLERY':
-      const newState = Object.assign({}, state, {
+      const addState = Object.assign({}, state, {
         piece_ids: [...state.piece_ids, action.payload.data.id]
       })
-      return newState
+      return addState
     case 'CREATE_GALLERY':
       return action.payload.gallery
+    case 'REMOVE_PIECE_FROM_GALLERY':
+      const removeState = Object.assign({}, state, {
+        piece_ids: action.payload.piece_ids
+      })
+      return removeState
     default:
       return state
   }
