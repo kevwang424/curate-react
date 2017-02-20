@@ -17,7 +17,7 @@ class SearchPiece extends Component {
 
     const pieceInfo = {
       title: this.props.details.title,
-      artist_name: this.props.details.people[0].name,
+      artist_name: (this.props.details.people ? this.props.details.people[0].name : "Not Listed"),
       classification: this.props.details.classifcation,
       century: this.props.details.century,
       culture: this.props.details.culture,
