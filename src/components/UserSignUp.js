@@ -25,7 +25,7 @@ class UserSignUp extends Component {
 
   render(){
     return(
-      <div className="good-form flex-container__item">
+      <div className="form">
         <form onSubmit={this.handleSubmit} ref="this_form">
           <input ref="first_name" placeholder="Enter First Name"/>
           <input ref="last_name" placeholder="Enter Last Name"/>

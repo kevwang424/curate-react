@@ -29,9 +29,9 @@ class Search extends Component {
 
   render(){
     return(
-      <div>
-        <form className="search-form" onSubmit={this.handleSubmit} ref="this_form">
-          <select className="dropdown" ref="per_page">
+      <div className="form">
+        <form onSubmit={this.handleSubmit} ref="this_form">
+          <select ref="per_page">
             <option value="">Results per page</option>
             <option value="10">10</option>
             <option value="25">25</option>

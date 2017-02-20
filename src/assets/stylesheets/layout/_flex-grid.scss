@@ -71,7 +71,7 @@ $fg-breakpoints: (
 /**
  * Spacing mixin to create uniform margin/padding
  */
-@mixin spacing( $value, $type: margin, $orientation: vertical ) {
+@mixin spacing($value, $type: margin, $orientation: vertical) {
   @if $orientation == vertical {
     #{ $type }-top: $value;
     #{ $type }-bottom: $value;
@@ -85,22 +85,23 @@ $fg-breakpoints: (
  * Row wrapper class, flex box parent.
  */
 .#{ $fg-class-row } {
+  @include spacing((-$fg-gutter), margin, horizontal);
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  @include spacing( ( -$fg-gutter ), margin, horizontal );
+  text-align: left;
 }
 
 
 %#{ $fg-class-col } {
+  @include spacing(($fg-gutter), padding, horizontal);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   flex-grow: 0;
   flex-shrink: 0;
   min-height: 1px;
-  @include spacing( ( $fg-gutter ), padding, horizontal );
 }
 
 %#{ $fg-class-col }-flex {
@@ -120,7 +121,7 @@ $fg-breakpoints: (
  * .#{ $fg-class-off }-[namespace]-reset for resetting a col's offset for that and larger namespaces
  */
 
-@mixin grid-base( $namespace ) {
+@mixin grid-base($namespace) {
   .#{ $fg-class-col }-#{$namespace} {
     @extend %#{ $fg-class-col }-flex;
   }
@@ -132,20 +133,20 @@ $fg-breakpoints: (
   }
 }
 
-@mixin grid-sizes( $namespace ) {
+@mixin grid-sizes($namespace) {
 
   // Run the loop for as many columns as speficied
   @for $i from 1 through $fg-columns {
     .#{ $fg-class-col }-#{$namespace}-#{$i} {
       flex-basis: get-col-percent($i);
-      max-width:  get-col-percent($i);
+      max-width: get-col-percent($i);
     }
   }
 
   @for $i from 1 through $fg-columns {
 
     // Don't include the .off class for the last column
-    @if ( $i != $fg-columns ) {
+    @if ($i != $fg-columns) {
       .#{ $fg-class-off }-#{$namespace}-#{$i} {
         margin-left: get-col-percent($i);
       }
@@ -168,7 +169,7 @@ $fg-breakpoints: (
 @each $val in $fg-breakpoints {
 
   $namespace: nth($val, 1);
-  @include grid-base( $namespace );
+  @include grid-base($namespace);
 
 }
 
@@ -176,7 +177,7 @@ $fg-breakpoints: (
   @if length($val) == 1 {
 
     $namespace: nth($val, 1);
-    @include grid-sizes( $namespace );
+    @include grid-sizes($namespace);
 
   } @else {
 
@@ -184,7 +185,7 @@ $fg-breakpoints: (
     $size: nth($val, 2);
 
     @media only screen and (min-width: #{$size}) {
-      @include grid-sizes( $namespace );
+      @include grid-sizes($namespace);
     }
   }
 }

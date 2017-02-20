@@ -19,17 +19,13 @@ class CreateGallery extends Component {
   render(){
     return(
       <div>
-        <h1>Create a New Gallery</h1>
-        <h2>Please name your gallery and add an optional description</h2>
-        <div className="flex-container__item">
-          <div className="good-form">
+          <div className="form">
             <form onSubmit={this.handleSubmit} ref="this_form">
               <input type="text" placeholder="New Gallery Name" ref="name" />
               <textarea placeholder="Write a description (optional)" ref="description" />
-              <button type="submit" className="btn">Create Gallery</button>
+              <button type="submit" className="btn">New Gallery</button>
             </form>
           </div>
-        </div>
       </div>
     )
   }

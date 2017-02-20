@@ -25,7 +25,7 @@ class Gallery extends Component{
       <div className="gallery">
         <h1>Gallery Component</h1>
         <h1>{gallery.name}</h1>
-        <h1>{gallery.description}</h1>
+        <h2>{gallery.description}</h2>
           {gallery.piece_ids.map( piece_id => <Piece key={piece_id} id={piece_id} />)}
         < Search />
         < SearchResults gallery={gallery.id}/>

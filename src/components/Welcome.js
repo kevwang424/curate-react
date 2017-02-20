@@ -1,21 +1,15 @@
 import React from 'react'
-// import Login from './Login'
-// import UserSignUp from './UserSignUp'
 import { Link } from 'react-router'
-import loading from '../assets/images/koolaid.png'
 
 export default function Welcome(){
   return(
-    <div className="welcome">
-      <h1>Welcome to IT DO CURATE!</h1>
-      <nav className='nav flex-container__item'>
-        <ul>
-          <li><Link to='/login'>Login</Link></li>
-          <li><Link to='/signup'>Sign Up!</Link></li>
-        </ul>
-        <img src={loading} className="loading" alt="spinner" />
-      </nav>
-
+    <div>
+      <div className="row col-xs-12">
+        <h1>Welcome to IT DO CURATE!</h1>
+        <div className='row col-xs-12'>
+        <p><Link to='/login'>Login</Link> or <Link to='/signup'>Sign Up</Link></p>
+        </div>
+      </div>
     </div>
   )
 }

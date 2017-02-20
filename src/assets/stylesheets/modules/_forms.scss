@@ -1,0 +1,23 @@
+.form {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: $form-bg;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid $input-border;
+  border-radius: 5px;
+}
+
+select {
+  width: 10%;
+  padding: 8px;
+  border: 1px solid $input-border;
+  background-color: $white;
+  border-radius: 5px;
+}

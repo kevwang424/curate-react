@@ -16,15 +16,21 @@ class App extends Component {
     }
 
     return (
-        <div className="flex-container">
-          <header className="header">
-            <div className="header__img"><img src={yoko} alt="yoko" height='150px' /></div>
-            <img src={logo} className="header__logo" alt="logo" />
-            <h1>It Do Curate</h1>
-          </header>
-          <div>
-            {loggedIn}
-            {this.props.children}
+      <div>
+        <div className="row col-xs-12">
+            <header className="header">
+              <div className="header__img">
+              <img src={yoko} alt="yoko" height="150px"/>
+              </div>
+              <img src={logo} className="header__logo" alt="logo" />
+              <h1>It Do Curate</h1>
+            </header>
+        </div>
+        <div className="row">
+          <div className="col-xs-12">
+          {loggedIn}
+          </div>
+          {this.props.children}
         </div>
       </div>
     )

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { fetchPiece } from '../actions'
-// import { fetchPiece, addCommentary } from '../actions'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import loading from '../assets/images/koolaid.png'
@@ -54,6 +53,12 @@ class Piece extends Component{
            <Modal className="modal-box-item--bottom" contentLabel='Modal'></Modal>
           </Modal>
     </div>)
+    return(
+      <div className="gallery__frame">
+      <h1>Title: {piece.title}</h1>
+      <img src={piece.image_url} alt={piece.title}/>
+    </div>
+    )
   } else {
     return <div><img src={loading} className="loading" alt="spinner" /></div>
   }
@@ -71,8 +76,5 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({ fetchPiece }, dispatch)
 }
 
-// function mapDispatchToProps(dispatch) {
-//   return bindActionCreators({ fetchPiece, addCommentary }, dispatch)
-// }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Piece)
