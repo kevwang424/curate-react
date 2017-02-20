@@ -19,11 +19,19 @@ class Search extends Component {
     let newState = Object.assign({}, this.state)
     newState[event.target.name] = event.target.value
     this.setState(newState)
+    let params = {
+      criteria: newState
+    }
+    this.props.searchAPI(params)
   }
 
   handleSubmit(event){
     event.preventDefault()
-    this.props.searchAPI(this.refs.per_page.value)
+    let params = {
+      page: this.refs.per_page.value,
+      criteria: this.state.search
+    }
+    this.props.searchAPI(params)
     this.refs.this_form.reset()
   }
 
@@ -32,7 +40,7 @@ class Search extends Component {
       <div className="form">
         <form onSubmit={this.handleSubmit} ref="this_form">
           <select ref="per_page">
-            <option value="">Results per page</option>
+            Results per page
             <option value="10">10</option>
             <option value="25">25</option>
             <option value="50">50</option>

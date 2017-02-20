@@ -64,8 +64,13 @@ export const destroySession = () => {
   }
 }
 
-export const searchAPI = (perPage) => {
-  let response = axios.get(`http://api.harvardartmuseums.org/object?apikey=48d94c00-f18a-11e6-89ba-839d228fa55c&size=${perPage}&hasimage=1`).then(result => result.data.records)
+export const searchAPI = (params) => {
+  let response
+  if (params.page){
+    response = axios.get(`http://api.harvardartmuseums.org/object?apikey=48d94c00-f18a-11e6-89ba-839d228fa55c&size=${params.criteria.page}&hasimage=1&q=${params.criteria.search}`).then(result => result.data.records)
+  } else {
+    response = axios.get(`http://api.harvardartmuseums.org/object?apikey=48d94c00-f18a-11e6-89ba-839d228fa55c&size=&hasimage=1&q=${params.criteria.search}`).then(result => result.data.records)
+  }
   return {
     type: 'API_RESULTS',
     payload: response
