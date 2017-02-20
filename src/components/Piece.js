@@ -16,7 +16,7 @@ class Piece extends Component{
 
     if (piece){
     return(
-      <div>
+      <div className="gallery__frame">
       <h1>Title: {piece.title}</h1>
       <img src={piece.image_url} alt={piece.title}/>
     </div>

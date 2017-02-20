@@ -1,0 +1,40 @@
+.browse-module {
+  margin: $fg-class-row;
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  padding: 15px
+}
+
+.browse-module__form-filters {
+  position: relative;
+  z-index: 10;
+  background: #fff;
+}
+
+.browse-module__input-wrapper {
+  position: relative;
+}
+
+.browse-module__input-text {
+    height: 73px;
+    padding-right: 70px;
+    font-size: 20px;
+    line-height: 37px;
+    text-overflow: ellipsis;
+    position: relative
+}
+
+// relative makes the position relative to the parent
+.filter-component {
+    position: relative;
+    padding-top: 13px;
+    padding-bottom: 68px;
+    color: #3d3d3d;
+    font-family: "Playfair Display", serif;
+    font-size: 16px/25px;
+}
+
+.filter-component__parents {
+    position: relative;
+}

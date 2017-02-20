@@ -25,9 +25,7 @@ class Gallery extends Component{
         <h1>Gallery Component</h1>
         <h1>{gallery.name}</h1>
         <h2>{gallery.description}</h2>
-        <div className="gallery__frame">
           {gallery.piece_ids.map( piece_id => <Piece key={piece_id} id={piece_id} />)}
-        </div>
         < Search />
         < SearchResults gallery={gallery.id}/>
     </div>
