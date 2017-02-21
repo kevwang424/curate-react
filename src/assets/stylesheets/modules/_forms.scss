@@ -1,27 +1,37 @@
 .form {
   box-sizing: border-box;
-  width: 100%;
+  width: 60%;
   padding: 10px;
+  margin: 0px 10px;
   border-radius: 5px;
   background-color: $form-bg;
 }
 
-input,
-textarea {
+.form__create {
+  display: flex-inline;
+  flex-direction: row;
+  align-items: flex-start;
+  input {
+    width: 33%;
+    margin-right: 0.5em;
+  }
+}
+
+input {
   width: 100%;
   padding: 1em;
   height: 4em;
   margin-bottom: 0.5em;
   border: 1px solid $input-border;
-  border-radius: 5px;
+  border-radius: 0.25em;
 }
 
 select {
-  width: 20%;
-  padding: 1em;
-  height: 2.4em;
+  width: 150px;
+  padding: 0.5em;
+  height: 4em;
   margin-bottom: 0.5em;
   border: 1px solid $input-border;
   background-color: $white;
-  border-radius: 5px;
+  border-radius: 0.25em;
 }

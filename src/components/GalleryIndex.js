@@ -29,14 +29,12 @@ class GalleryIndex extends Component {
     } else {
       return (
         <div>
-          <div className="nav">
-            <form>
+          <form>
             <select ref="user_gallery" onChange={this.handleChange}>
-              <option value='' selected disabled>View Gallery</option>
+              <option value=''>View Gallery</option>
               {galleryIndex.map(galleryList)}
             </select>
           </form>
-          </div>
         </div>
       )
     }

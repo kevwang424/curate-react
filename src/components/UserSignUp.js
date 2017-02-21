@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { createUser } from '../actions/index'
 import { connect } from 'react-redux'
-// import { Link } from 'react-router'
 
 class UserSignUp extends Component {
   constructor() {
@@ -25,15 +24,19 @@ class UserSignUp extends Component {
 
   render(){
     return(
-      <div className="form col-lg-6 col-md-6 col-xs-12">
-        <form onSubmit={this.handleSubmit} ref="this_form">
-          <input ref="first_name" placeholder="First Name"/>
-          <input ref="last_name" placeholder="Last Name"/>
-          <input ref="email" placeholder="Email"/>
-          <input type="password" ref="userPassword" placeholder="Password" />
-          <input type="password" ref="passwordConfirmation" placeholder="Verify Password" />
-          <button type="submit" className="btn">Submit</button>
-        </form>
+      <div className="container">
+        <div className="row off-lg-3">
+          <div className="form">
+            <form onSubmit={this.handleSubmit} ref="this_form">
+              <input ref="first_name" placeholder="First Name"/>
+              <input ref="last_name" placeholder="Last Name"/>
+              <input ref="email" placeholder="Email"/>
+              <input type="password" ref="userPassword" placeholder="Password" />
+              <input type="password" ref="passwordConfirmation" placeholder="Verify Password" />
+              <button type="submit" className="btn">Submit</button>
+            </form>
+          </div>
+        </div>
       </div>
     )
   }
