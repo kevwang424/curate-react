@@ -53,13 +53,13 @@ class SearchPiece extends Component {
 
     return(
       <div className="flex-container">
+        <div className="row">
+          <div className="col-md-3 col-xs-6">
         <form>
           <h1>{details.title}</h1>
-          <Modal className="modal-gallery-search" isOpen={this.state.modalIsOpen} contentLabel='Modal'>
-            <Modal className="modal-box-item--top" contentLabel='Modal'></Modal>
+          <Modal className="modal-gallery" isOpen={this.state.modalIsOpen} contentLabel='Modal'>
             <img alt={details.title} src={details.primaryimageurl}
               onClick={this.closeModal.bind(this)}/>
-              <Modal className="modal-box-item--top" contentLabel='Modal'></Modal>
             </Modal>
           <img alt={details.title} src={details.primaryimageurl} onClick={this.handleClick.bind(this)}/>
           <h4>Artist: {details.people ? details.people[0].name : "Not Listed"} </h4>
@@ -68,6 +68,8 @@ class SearchPiece extends Component {
           <h4> Dimensions: {details.dimensions ? details.dimensions : "Not Found"}</h4>
           <button type="submit" className="btn" onClick={this.addToGallery.bind(this)}> Add to Gallery </button>
         </form>
+        </div>
+      </div>
       </div>
     )
   }

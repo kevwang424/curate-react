@@ -39,23 +39,19 @@ class Piece extends Component{
       return(
         <div>
           <div className="gallery__frame" onClick={this.handleClick.bind(this)}>
-            <h1>{piece.title}</h1>
+            <h3>{piece.title}</h3>
             <img alt={piece.title} src={piece.image_url}/>
                <Modal className="modal-user-gallery" isOpen={this.state.modalIsOpen} contentLabel='Modal'>
-                 <Modal className="modal-box-item--top" contentLabel='Modal'></Modal>
-                 <ul>
-                 <li><h2>Title: {piece.title}</h2></li>
-                 <li><h4>Artist: {piece.artist_name}</h4></li>
-                 <li><h4>Dated: {piece.dated}</h4></li>
-                 <li><h4>Classification: {piece.classifcation}</h4></li>
-                 <li><h4>Dimensions: {piece.dimensions}</h4></li>
-                 <li><h4>Culture: {piece.culture}</h4></li>
-                 <li><h4>Century: {piece.century}</h4></li>
-                 <li><h4>Label Text: {piece.label_text}</h4></li>
-                 <li><h4>Commentary: {piece.commentary}</h4></li>
-               </ul>
+                <h4>Title: {piece.title}</h4>
+                 <p>Artist: {piece.artist_name}</p>
+                 <p>Dated: {piece.dated}</p>
+                 <p>Classification: {piece.classifcation}</p>
+                 <p>Dimensions: {piece.dimensions}</p>
+                 <p>Culture: {piece.culture}</p>
+                <p>Century: {piece.century}</p>
+                 <p>Label Text: {piece.label_text}</p>
+                 <p>Commentary: {piece.commentary}</p>
                <button className="btn" onClick={this.closeModal.bind(this)}>x</button>
-               <Modal className="modal-box-item--bottom" contentLabel='Modal'></Modal>
               </Modal>
             </div>
             <form >
