@@ -5,9 +5,11 @@ export default function(state=[], action) {
     case 'CREATE_USER':
       return action.payload.data
     case 'CREATE_SESSION':
-      return state
+      return action.payload
     case 'DESTROY_SESSION':
       return state
+    case 'SET_USER':
+      return action.payload
     default:
       return state
   }

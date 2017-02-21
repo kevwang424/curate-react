@@ -21,15 +21,13 @@ class Search extends Component {
     let params = {
       criteria: newState
     }
-    this.props.searchAPI(params)
+    // this.props.searchAPI(params)
 
+    const de = _.debounce((params) => {
+      this.props.searchAPI(params)
+    }, 250)
 
-    // const de = _.debounce((params) => {
-    //   console.log(params.criteria)
-    //   this.props.searchAPI(params)
-    // }, 1000)
-    //
-    // de(params)
+    de(params)
   }
 
   render(){
