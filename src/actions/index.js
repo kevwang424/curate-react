@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { browserHistory } from 'react-router'
+import _ from 'lodash'
 
 const URL = 'http://localhost:3000/api/v1'
 axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
@@ -64,8 +65,15 @@ export const destroySession = () => {
   }
 }
 
-export const searchAPI = (perPage) => {
-  let response = axios.get(`http://api.harvardartmuseums.org/object?apikey=48d94c00-f18a-11e6-89ba-839d228fa55c&size=${perPage}&hasimage=1`).then(result => result.data.records)
+function updateSearch(params) {
+  return _.debounce(()=> {
+    axios.get(`http://api.harvardartmuseums.org/object?apikey=48d94c00-f18a-11e6-89ba-839d228fa55c&size=100&hasimage=1&q=${params.criteria.search}`).then(result => result.data.records)
+  }, 500)()
+}
+
+export const searchAPI =(params)=> {
+  let response = updateSearch(params)
+  debugger
   return {
     type: 'API_RESULTS',
     payload: response
@@ -93,6 +101,14 @@ export const removePiece = (piece, gallery) => {
   let response = axios.post(`${URL}/remove`, {piece: piece, gallery_id: gallery}).then(response => response.data)
   return {
     type: "REMOVE_PIECE_FROM_GALLERY",
+    payload: response
+  }
+}
+
+export const deleteGallery = (id) => {
+  let response = axios.delete(`${URL}/galleries/${id}`).then(response => response.data)
+  return {
+    type: 'DELETE_GALLERY',
     payload: response
   }
 }

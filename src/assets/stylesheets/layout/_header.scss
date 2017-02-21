@@ -1,9 +1,9 @@
 .header {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: $header-bg-color;
   height: $header-height;
-  margin-bottom: $header-height;
-  color: $lavender;
-  text-align: center;
+  color: $header-color;
+  text-align: left;
+  align-items: flex-baseline;
 }
 
 .header__img {

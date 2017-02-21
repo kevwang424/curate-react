@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Piece from './Piece'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { fetchGallery } from '../actions'
+import { fetchGallery, deleteGallery } from '../actions'
 import loading from '../assets/images/koolaid.png'
 import Search from './Search'
 import SearchResults from './SearchResults'
@@ -10,8 +10,13 @@ import SearchResults from './SearchResults'
 
 class Gallery extends Component{
 
-  componentDidMount(){
-    this.props.fetchGallery()
+  // componentDidMount(){
+  //   this.props.fetchGallery()
+  // }
+
+  handleDelete(event) {
+
+    this.props.deleteGallery(this.props.gallery.id)
   }
 
 
@@ -23,12 +28,13 @@ class Gallery extends Component{
     else {
     return(
       <div className="gallery">
-        <h1>Gallery Component</h1>
         <h1>{gallery.name}</h1>
         <h2>{gallery.description}</h2>
+        <Search />
           {gallery.piece_ids.map( piece_id => <Piece key={piece_id} id={piece_id} gallery_id={gallery.id}/>)}
-        < Search />
-        < SearchResults gallery={gallery.id}/>
+          <button className="btn" type="submit" onClick={this.handleDelete.bind(this)}>Delete Gallery</button>
+
+        <SearchResults gallery={gallery.id} />
     </div>
     )
   }
@@ -42,7 +48,7 @@ function mapStateToProps(state){
 }
 
 function mapDispatchToProps(dispatch){
-  return bindActionCreators({fetchGallery}, dispatch)
+  return bindActionCreators({fetchGallery, deleteGallery}, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Gallery)

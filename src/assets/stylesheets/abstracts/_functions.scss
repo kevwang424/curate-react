@@ -7,7 +7,3 @@
   font-size: $size;
   font-size: calculate-rem($size);
 }
-
-@function image($path, $base: $base-url) {
-  @return asset($base, 'images/', $path);
-}

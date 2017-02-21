@@ -1,5 +1,17 @@
 body {
   background-color: $bg-color;
+  color: $main-text-color;
   font-family: $text-font-serif;
   font-size: 100%;
+  line-height: 1.8rem;
+  margin: 0;
+
+}
+
+ul,
+li {
+  list-style-type: none;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
 }
