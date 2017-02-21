@@ -1,31 +1,30 @@
 .modal-user-gallery {
+  align-content: center;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   position: absolute;
   padding: 1em;
   margin-bottom: 0.5em;
+  max-height: 100%;
+  overflow-y: scroll;
+  max-width: 65%;
+  text-align: center;
+  top: 5%;
+  right: 15%;
+}
+
+.modal-gallery img {
+  align-content: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  position: absolute;;
+  padding: 1em;
+  margin-bottom: 0.5em;
   height: auto;
   width: auto;
   max-width: 65%;
-  text-align: center;
-}
-
-.modal-box-item--top {
-  align-self: flex-start;
-}
-
-.modal-box-item--bottom {
-  align-self: flex-end;
-}
-
-.modal-gallery-search {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: center;
-  max-width: 50%;
-  position: relative;
-  height: auto;
-  width: auto;
+  top: 5%;
+  left: 15%;
 }
