@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { searchAPI } from '../actions'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-
+import _ from 'lodash'
 
 class Search extends Component {
 
@@ -22,6 +22,14 @@ class Search extends Component {
       criteria: newState
     }
     this.props.searchAPI(params)
+
+
+    // const de = _.debounce((params) => {
+    //   console.log(params.criteria)
+    //   this.props.searchAPI(params)
+    // }, 1000)
+    //
+    // de(params)
   }
 
   render(){
