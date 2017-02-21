@@ -1,12 +1,14 @@
 .modal-user-gallery {
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
   justify-content: center;
-  max-width: 50%;
-  position: relative;
-  width: 100px;
-  height: 100px;
+  position: absolute;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  height: auto;
+  width: auto;
+  max-width: 65%;
+  text-align: center;
 }
 
 .modal-box-item--top {

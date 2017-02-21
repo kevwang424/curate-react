@@ -44,7 +44,7 @@ class Piece extends Component{
                <Modal className="modal-user-gallery" isOpen={this.state.modalIsOpen} contentLabel='Modal'>
                  <Modal className="modal-box-item--top" contentLabel='Modal'></Modal>
                  <ul>
-                 <li><h2 onClick={this.closeModal.bind(this)}>Title: {piece.title}</h2></li>
+                 <li><h2>Title: {piece.title}</h2></li>
                  <li><h4>Artist: {piece.artist_name}</h4></li>
                  <li><h4>Dated: {piece.dated}</h4></li>
                  <li><h4>Classification: {piece.classifcation}</h4></li>
@@ -54,6 +54,7 @@ class Piece extends Component{
                  <li><h4>Label Text: {piece.label_text}</h4></li>
                  <li><h4>Commentary: {piece.commentary}</h4></li>
                </ul>
+               <button className="btn" onClick={this.closeModal.bind(this)}>x</button>
                <Modal className="modal-box-item--bottom" contentLabel='Modal'></Modal>
               </Modal>
             </div>
