@@ -6,16 +6,12 @@ import { fetchGallery, deleteGallery } from '../actions'
 import loading from '../assets/images/koolaid.png'
 import Search from './Search'
 import SearchResults from './SearchResults'
+import EditGallery from './EditGallery'
 
 
 class Gallery extends Component{
 
-  // componentDidMount(){
-  //   this.props.fetchGallery()
-  // }
-
   handleDelete(event) {
-
     this.props.deleteGallery(this.props.gallery.id)
   }
 
@@ -28,6 +24,7 @@ class Gallery extends Component{
     else {
     return(
       <div className="gallery">
+        <EditGallery name={gallery.name} description={gallery.description} gallery={gallery.id}/>
         <h1>{gallery.name}</h1>
         <h2>{gallery.description}</h2>
         <Search />

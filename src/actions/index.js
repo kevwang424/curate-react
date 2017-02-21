@@ -81,6 +81,14 @@ export const createGallery = (params) => {
   }
 }
 
+export const editGallery = (params) => {
+  let response = axios.patch(`${URL}/galleries/${params.id}`, params).then(response => response.data)
+  return {
+    type: 'EDIT_GALLERY',
+    payload: response
+  }
+}
+
 export const addPieceToDb = (newPiece) => {
   let response = axios.post(`${URL}/pieces`, newPiece)
   return {
