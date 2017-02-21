@@ -9,6 +9,7 @@ class Nav extends Component {
   render(){
     return(
       <div>
+        <h1>Hello {this.props.first_name}!</h1>
         <div className="nav">
           <ul>
             <li><GalleryIndex /></li>

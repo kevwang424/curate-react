@@ -49,7 +49,7 @@ export const createSession = (loginParams) => {
     sessionStorage.setItem('jwt', response.data.jwt)
     axios.defaults.headers.common['AUTHORIZATION'] = response.data.jwt
     browserHistory.push('/user')
-  })
+  } )
   return {
     type: 'CREATE_SESSION'
   }
@@ -101,6 +101,14 @@ export const deleteGallery = (id) => {
   let response = axios.delete(`${URL}/galleries/${id}`).then(response => response.data)
   return {
     type: 'DELETE_GALLERY',
+    payload: response
+  }
+}
+
+export const setUser = () => {
+  let response = axios.get(`${URL}/users`).then(response => response.data)
+  return {
+    type: 'SET_USER',
     payload: response
   }
 }
