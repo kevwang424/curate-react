@@ -29,8 +29,14 @@ class EditGallery extends Component {
   }
 }
 
+function mapStateToProps(state){
+  return {
+    gallery: state.gallery
+  }
+}
+
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({editGallery}, dispatch)
 }
 
-export default connect(null, mapDispatchToProps)(EditGallery)
+export default connect(mapStateToProps, mapDispatchToProps)(EditGallery)
