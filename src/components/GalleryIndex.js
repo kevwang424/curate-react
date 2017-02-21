@@ -10,9 +10,7 @@ class GalleryIndex extends Component {
     this.props.fetchUserGalleries()
   }
 
-
-
-  handleOnClick(event){
+  handleChange =(event)=>{
     event.preventDefault()
     this.props.fetchGallery(this.refs.user_gallery.value)
   }
@@ -32,11 +30,11 @@ class GalleryIndex extends Component {
       return (
         <div>
           <div className="nav">
-            <form onSubmit={this.handleOnClick.bind(this)}>
-            <select ref="user_gallery">
+            <form>
+            <select ref="user_gallery" onChange={this.handleChange}>
+              <option value='' selected disabled>View Gallery</option>
               {galleryIndex.map(galleryList)}
             </select>
-            <button className="btn" type="submit" onClick={this.handleOnClick.bind(this)}>Show Me My Galleries</button>
           </form>
           </div>
         </div>
@@ -50,7 +48,6 @@ function mapStateToProps(state) {
     galleryIndex: state.galleryIndex
   }
 }
-
 
 function mapDispatchToProps(dispatch){
   return bindActionCreators({fetchUserGalleries, fetchGallery}, dispatch)

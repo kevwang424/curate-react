@@ -8,6 +8,7 @@ class Logout extends Component {
   handleLogOut(event) {
     event.preventDefault()
     this.props.destroySession()
+    
   }
 
   render(){
