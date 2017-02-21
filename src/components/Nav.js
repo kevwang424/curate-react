@@ -8,15 +8,19 @@ import Logout from './Logout'
 class Nav extends Component {
   render(){
     return(
-      <div>
-        <h1>Hello {this.props.first_name}!</h1>
-        <div className="nav">
-          <ul>
-            <li><GalleryIndex /></li>
-            <li><CreateGallery /></li>
-            <li><Logout /></li>
-          </ul>
+      <div className="nav">
+        <div className="nav__item-name">
+        <p className="small-font">Hello, {this.props.first_name}!</p>
         </div>
+          <div className="nav__item-index">
+            <GalleryIndex />
+          </div>
+          <div className="nav__item">
+            <CreateGallery />
+          </div>
+          <div className="nav__item">
+            <Logout />
+          </div>
       </div>
     )
   }

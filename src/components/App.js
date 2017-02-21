@@ -15,19 +15,17 @@ class App extends Component {
     return (
       <div>
         <div className="row">
-            <header className="header col-xs-12">
-              <div className="col-lg-2 col-xs-12">
+            <header className="header col-s-12">
+              <div className="col-lg-2 col-s-12">
                 <h1>It Do <br/>Curate</h1>
               </div>
             </header>
         </div>
-        <div className="container">
-          <div className="row">
-            <div className="col-xs-12">
-            {loggedIn}
-            </div>
-            {this.props.children}
+        <div className="row">
+          <div className="col-s-12">
+          {loggedIn}
           </div>
+          {this.props.children}
         </div>
       </div>
     )

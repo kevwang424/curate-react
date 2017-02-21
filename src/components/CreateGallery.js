@@ -19,10 +19,10 @@ class CreateGallery extends Component {
   render(){
     return(
       <div>
-          <div className="form">
+          <div className="form__create">
             <form onSubmit={this.handleSubmit} ref="this_form">
               <input type="text" placeholder="New Gallery Name" ref="name" />
-              <textarea placeholder="Write a description (optional)" ref="description" />
+              <input type="text" placeholder="Write a description (optional)" ref="description" />
               <button type="submit" className="btn">New Gallery</button>
             </form>
           </div>

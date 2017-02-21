@@ -14,12 +14,12 @@ class User extends Component{
   render(){
     return(
       <div>
-        <div className="row">
-          <div className="col-lg-4 col-xs-12">
-            <Nav first_name={this.props.user.first_name}/>
-          </div>
-          <div className="col-lg-8 col-xs-12">
-            <Gallery />
+        <div className="row col-s-12">
+            <Nav first_name={this.props.user.first_name} />
+        </div>
+        <div className="container">
+          <div className="row col-s-12">
+              <Gallery />
           </div>
         </div>
       </div>

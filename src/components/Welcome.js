@@ -3,12 +3,12 @@ import { Link } from 'react-router'
 
 export default function Welcome(){
   return(
-    <div>
-      <div className="row col-xs-12">
+    <div className="container">
+      <div className="row off-lg-3">
         <h1>Welcome to IT DO CURATE!</h1>
-        <div className='row col-xs-12'>
+      </div>
+      <div className="row off-lg-5">
         <p><Link to='/login'>Login</Link> or <Link to='/signup'>Sign Up</Link></p>
-        </div>
       </div>
     </div>
   )
