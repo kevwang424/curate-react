@@ -12,7 +12,6 @@ class Search extends Component {
       search: ""
     }
     this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleChange(event){
@@ -25,29 +24,11 @@ class Search extends Component {
     this.props.searchAPI(params)
   }
 
-  handleSubmit(event){
-    event.preventDefault()
-    let params = {
-      page: this.refs.per_page.value,
-      criteria: this.state.search
-    }
-    this.props.searchAPI(params)
-    this.refs.this_form.reset()
-  }
-
   render(){
     return(
       <div className="form">
-        <form onSubmit={this.handleSubmit} ref="this_form">
-          <select ref="per_page">
-            <option value="" disabled selected>Results per page</option>
-            <option value="10">10</option>
-            <option value="25">25</option>
-            <option value="50">50</option>
-            <option value="100">100</option>
-          </select>
+        <form ref="this_form">
           <input type="text" value={this.state.search} onChange={this.handleChange} name="search" placeholder="Search for Art"/>
-          <button type="submit" className="btn" onClick={this.handleSubmit}>Search</button>
         </form>
       </div>
     )

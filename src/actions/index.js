@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { browserHistory } from 'react-router'
+import _ from 'lodash'
 
 const URL = 'http://localhost:3000/api/v1'
 axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
@@ -64,13 +65,15 @@ export const destroySession = () => {
   }
 }
 
-export const searchAPI = (params) => {
-  let response
-  if (params.page){
-    response = axios.get(`http://api.harvardartmuseums.org/object?apikey=48d94c00-f18a-11e6-89ba-839d228fa55c&size=${params.criteria.page}&hasimage=1&q=${params.criteria.search}`).then(result => result.data.records)
-  } else {
-    response = axios.get(`http://api.harvardartmuseums.org/object?apikey=48d94c00-f18a-11e6-89ba-839d228fa55c&size=&hasimage=1&q=${params.criteria.search}`).then(result => result.data.records)
-  }
+function updateSearch(params) {
+  return _.debounce(()=> {
+    axios.get(`http://api.harvardartmuseums.org/object?apikey=48d94c00-f18a-11e6-89ba-839d228fa55c&size=100&hasimage=1&q=${params.criteria.search}`).then(result => result.data.records)
+  }, 500)()
+}
+
+export const searchAPI =(params)=> {
+  let response = updateSearch(params)
+  debugger
   return {
     type: 'API_RESULTS',
     payload: response
