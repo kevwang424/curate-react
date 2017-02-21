@@ -5,10 +5,19 @@ import galleryReducer from './gallery-reducer'
 import galleryIndexReducer from './gallery-index-reducer'
 import apiReducer from './api-reducer'
 
-export default combineReducers({
+const appReducer = combineReducers({
   user: usersReducer,
   piece: pieceReducer,
   gallery: galleryReducer,
   galleryIndex: galleryIndexReducer,
   apiSearchResults: apiReducer
 })
+
+const rootReducer = (state, action) => {
+  if (action.type === 'DESTROY_SESSION') {
+    state = undefined
+  }
+  return appReducer(state, action)
+}
+
+export default rootReducer
