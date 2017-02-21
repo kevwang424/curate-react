@@ -11,27 +11,34 @@ $breakpoint-medium: 768px;
 $breakpoint-mobile: 480px;
 
 //colors
-$whitesmoke: #f0f8ff;
+$beige: #fdf8ec;
+$ecru: #dbdcce;
 $pink-light: #fff0f5;
-$pink: #ffe4e1;
-$blue: #7fdbff;
-$blue-dark: #0074d9;
-$lavender: #d8bfd8;
+$pink: #eed8cd;
+$blue-slate: #4a6088;
+$blue-persian: #08084d;
+$blue-med: #0074d9;
+$green-hunter: #2d6759;
+$lavender: #c3b1b0;
 $chartreuse: #7fff00;
 $purple-light: #ce93d8;
 $periwinkle: #add8e6;
 $white: #fff;
 $black: #000;
-$grey: #444;
-$grey-light: #111;
+$grey: #384040;
 
-//background color
-$bg-color: $whitesmoke;
+//main colors
+$bg-color: $beige;
+$main-text-color: $grey;
+$header-color: $blue-persian;
+$header-bg-color: $ecru;
+$a: $blue-slate;
+$a-hover: $green-hunter;
 
 //button color
-$button-default: $grey-light;
-$button-hover: $blue;
-$button-active: $blue-dark;
+$button-default: $grey;
+$button-hover: $blue-slate;
+$button-active: $blue-med;
 $button-bg: $white;
 
 //form colors

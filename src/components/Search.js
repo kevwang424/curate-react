@@ -40,7 +40,7 @@ class Search extends Component {
       <div className="form">
         <form onSubmit={this.handleSubmit} ref="this_form">
           <select ref="per_page">
-            Results per page
+            <option value="" disabled selected>Results per page</option>
             <option value="10">10</option>
             <option value="25">25</option>
             <option value="50">50</option>

@@ -25,12 +25,12 @@ class UserSignUp extends Component {
 
   render(){
     return(
-      <div className="form">
+      <div className="form col-lg-6 col-md-6 col-xs-12">
         <form onSubmit={this.handleSubmit} ref="this_form">
-          <input ref="first_name" placeholder="Enter First Name"/>
-          <input ref="last_name" placeholder="Enter Last Name"/>
-          <input ref="email" placeholder="Enter Email"/>
-          <input type="password" ref="userPassword" placeholder="Enter Password" />
+          <input ref="first_name" placeholder="First Name"/>
+          <input ref="last_name" placeholder="Last Name"/>
+          <input ref="email" placeholder="Email"/>
+          <input type="password" ref="userPassword" placeholder="Password" />
           <input type="password" ref="passwordConfirmation" placeholder="Verify Password" />
           <button type="submit" className="btn">Submit</button>
         </form>
