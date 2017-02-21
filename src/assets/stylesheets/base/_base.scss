@@ -22,11 +22,11 @@ html {
  */
 a {
   text-decoration: none;
-  color: $chartreuse;
+  color: $a;
   transition: color 400ms;
 }
 
 a:hover {
-  color: $periwinkle;
+  color: $a-hover;
   transition: color 300ms;
 }

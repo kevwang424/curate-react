@@ -10,12 +10,12 @@ import SearchResults from './SearchResults'
 
 class Gallery extends Component{
 
-  componentDidMount(){
-    this.props.fetchGallery()
-  }
+  // componentDidMount(){
+  //   this.props.fetchGallery()
+  // }
 
   handleDelete(event) {
-  
+
     this.props.deleteGallery(this.props.gallery.id)
   }
 
@@ -28,12 +28,12 @@ class Gallery extends Component{
     else {
     return(
       <div className="gallery">
-        <h1>Gallery Component</h1>
         <h1>{gallery.name}</h1>
         <h2>{gallery.description}</h2>
+        <Search />
           {gallery.piece_ids.map( piece_id => <Piece key={piece_id} id={piece_id} gallery_id={gallery.id}/>)}
           <button className="btn" type="submit" onClick={this.handleDelete.bind(this)}>Delete Gallery</button>
-        <Search />
+
         <SearchResults gallery={gallery.id} />
     </div>
     )

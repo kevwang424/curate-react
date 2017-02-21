@@ -8,10 +8,11 @@
 @import 'base/typography';
 
 @import 'layout/flex-grid';
+@import 'layout/layout';
 @import 'layout/header';
 @import 'layout/nav';
+@import 'layout/modal';
 @import 'layout/footer';
-@import 'layout/layout';
 
 @import 'modules/buttons';
 @import 'modules/forms';
@@ -19,3 +20,4 @@
 
 @import 'pages/gallery';
 @import 'pages/searchresults';
+@import 'pages/searchpiece';

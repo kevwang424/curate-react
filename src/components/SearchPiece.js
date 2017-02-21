@@ -54,7 +54,7 @@ class SearchPiece extends Component {
     return(
       <div className="flex-container">
         <form>
-          <h1>Title: {details.title}</h1>
+          <h1>{details.title}</h1>
           <Modal className="modal-gallery-search" isOpen={this.state.modalIsOpen} contentLabel='Modal'>
             <Modal className="modal-box-item--top" contentLabel='Modal'></Modal>
             <img alt={details.title} src={details.primaryimageurl}
@@ -67,7 +67,6 @@ class SearchPiece extends Component {
           <h4>Classification: {details.classification}</h4>
           <h4> Dimensions: {details.dimensions ? details.dimensions : "Not Found"}</h4>
           <button type="submit" className="btn" onClick={this.addToGallery.bind(this)}> Add to Gallery </button>
-
         </form>
       </div>
     )
