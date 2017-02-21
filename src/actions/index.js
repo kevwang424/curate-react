@@ -10,9 +10,9 @@ export const createUser = (user) => {
     sessionStorage.setItem("jwt", userData.data.jwt)
     axios.defaults.headers.common['AUTHORIZATION'] = userData.data.jwt
     browserHistory.push("/user")
-
-    return userData
-  })
+  }).catch((errors) => {
+    browserHistory.push('/signup')
+    alert(errors.response.data.errors[0].detail)})
 
   return {
     type: 'CREATE_USER',
@@ -46,10 +46,13 @@ export const fetchUserGalleries = () => {
 
 export const createSession = (loginParams) => {
   axios.post(`${URL}/login`, loginParams).then((response) => {
-    sessionStorage.setItem('jwt', response.data.jwt)
-    axios.defaults.headers.common['AUTHORIZATION'] = response.data.jwt
-    browserHistory.push('/user')
-  } )
+      sessionStorage.setItem('jwt', response.data.jwt)
+      axios.defaults.headers.common['AUTHORIZATION'] = response.data.jwt
+      browserHistory.push('/user')
+  }).catch((errors) => {
+    browserHistory.push('/login')
+    alert(errors.response.data.errors[0].detail)
+  })
   return {
     type: 'CREATE_SESSION'
   }
