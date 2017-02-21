@@ -4,8 +4,13 @@ body {
   font-family: $text-font-serif;
   font-size: 100%;
   line-height: 1.8rem;
-  margin: 0;
+  margin: 0 0 50px;
+}
 
+h4 {
+  font-weight: bold;
+  word-wrap: normal;
+  font-size: 1.4rem;
 }
 
 ul,
@@ -20,8 +25,13 @@ li {
 .small-font {
   font-size: 0.75rem;
   line-height: 1.2rem;
+}
 
-p {
-  font-size: 12px;
+.med-font {
+  font-size: 0.8rem;
+}
 
+.modal-text {
+  text-align: center;
+  line-height: 1rem;
 }

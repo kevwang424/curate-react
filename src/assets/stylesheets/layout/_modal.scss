@@ -1,15 +1,12 @@
 .modal-user-gallery {
-  align-content: center;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
   position: absolute;
   padding: 1em;
   margin-bottom: 0.5em;
   max-height: 100%;
   overflow-y: scroll;
   max-width: 65%;
-  text-align: center;
   top: 5%;
   right: 15%;
 }
@@ -19,7 +16,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  position: absolute;;
+  position: absolute;
   padding: 1em;
   margin-bottom: 0.5em;
   height: auto;
