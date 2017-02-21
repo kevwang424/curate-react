@@ -60,6 +60,12 @@
   width: 100%;
 }
 
+.btn__x {
+  display: row inline-flex;
+  position: relative;
+  align-items: flex-end;
+}
+
 //pink button
 
 .btn--pink,

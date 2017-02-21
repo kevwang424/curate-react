@@ -42,17 +42,21 @@ class Piece extends Component{
             <h3>{piece.title}</h3>
             <img alt={piece.title} src={piece.image_url}/>
                <Modal className="modal-user-gallery" isOpen={this.state.modalIsOpen} contentLabel='Modal'>
-                <h4>Title: {piece.title}</h4>
-                 <p>Artist: {piece.artist_name}</p>
-                 <p>Dated: {piece.dated}</p>
-                 <p>Classification: {piece.classifcation}</p>
-                 <p>Dimensions: {piece.dimensions}</p>
-                 <p>Culture: {piece.culture}</p>
-                <p>Century: {piece.century}</p>
-                 <p>Label Text: {piece.label_text}</p>
-                 <p>Commentary: {piece.commentary}</p>
-               <button className="btn" onClick={this.closeModal.bind(this)}>x</button>
-              </Modal>
+               <div className="modal-text">
+                <h5>{piece.title}</h5>
+                 <p className="med-font">
+                   Artist: {piece.artist_name}<br/>
+                   Dated: {piece.dated}<br/>
+                   Classification: {piece.classifcation}<br/>
+                   Dimensions: {piece.dimensions}<br/>
+                   Culture: {piece.culture}<br/>
+                   Century: {piece.century}<br/>
+                   Label Text: {piece.label_text}<br/>
+                   Commentary: {piece.commentary}<br/>
+                   <button className="btn btn__x" onClick={this.closeModal.bind(this)}>x</button>
+                  </p>
+                </div>
+                </Modal>
             </div>
             <form >
               <button className='btn' value='submit' onClick={this.removePiece.bind(this)}>Remove above piece</button>
