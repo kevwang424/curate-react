@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Welcome from './Welcome'
 import { isLoggedIn } from '../auth/authenticator'
 import { connect } from 'react-redux'
-import Logout from './Logout'
 
 
 class App extends Component {
@@ -19,9 +18,6 @@ class App extends Component {
             <header className="header col-xs-12">
               <div className="col-lg-2 col-xs-12">
                 <h1>It Do <br/>Curate</h1>
-              </div>
-              <div className="off-lg-10 col-xs-12">
-                <Logout />
               </div>
             </header>
         </div>
