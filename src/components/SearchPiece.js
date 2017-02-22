@@ -54,11 +54,11 @@ class SearchPiece extends Component {
     return(
       <div className="flex-container">
         <div className="row">
-          <div className="col-xs-6 col-sm-3 col-md-2 col-lg-1">
+          <div className="col-s-3 col-md-2 col-lg-1">
         <form>
           <h5>{details.title}</h5>
           <Modal className="modal-gallery" isOpen={this.state.modalIsOpen} contentLabel='Modal'>
-            <img alt={details.title} src={details.primaryimageurl}
+            <img className="img" alt={details.title} src={details.primaryimageurl}
               onClick={this.closeModal.bind(this)}/>
             </Modal>
           <img alt={details.title} src={details.primaryimageurl} onClick={this.handleClick.bind(this)}/>
