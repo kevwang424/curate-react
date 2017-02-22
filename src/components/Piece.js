@@ -37,7 +37,7 @@ class Piece extends Component{
     const {piece} = this.props
     if (piece){
       return(
-        <div>
+        <div className="pg-align">
           <div className="gallery__frame" onClick={this.handleClick.bind(this)}>
             <h3>{piece.title}</h3>
             <img alt={piece.title} src={piece.image_url}/>
@@ -58,7 +58,7 @@ class Piece extends Component{
                 </div>
                 </Modal>
             </div>
-            <form >
+            <form>
               <button className='btn' value='submit' onClick={this.removePiece.bind(this)}>Remove above piece</button>
             </form>
           </div>
