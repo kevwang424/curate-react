@@ -21,6 +21,10 @@ li {
   padding: 0;
 }
 
+.x-small-font {
+  font-size: 0.65rem;
+  line-height: 1.0rem;
+}
 
 .small-font {
   font-size: 0.75rem;
@@ -35,6 +39,12 @@ li {
   text-align: center;
   line-height: 1rem;
 }
+
+.search-piece-text {
+  text-align: center;
+  line-height: 0.3rem;
+}
+
 
 .welcome-h1 {
   color: $h1-font;

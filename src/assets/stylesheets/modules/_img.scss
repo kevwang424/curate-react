@@ -1,6 +1,14 @@
-.img {
+.search-piece {
+  align-content: center;
   display: flex-inline;
-  max-width: 300px;
-  max-height: 250px;
-  position: absolute;
+  flex-wrap: wrap;
+  float: left;
+  height: 45%;
+  width: 45%;
+  overflow: auto;
+}
+
+.img-search {
+  height: 85%;
+  width: 100%;
 }

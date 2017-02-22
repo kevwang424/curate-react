@@ -53,26 +53,29 @@ class SearchPiece extends Component {
 
     return(
       <div className="flex-container">
-        <div className="row">
-          <div className="col-s-3 col-md-2 col-lg-1">
-        <form>
-          <h5>{details.title}</h5>
-          <Modal className="modal-gallery" isOpen={this.state.modalIsOpen} contentLabel='Modal'>
-            <img className="img" alt={details.title} src={details.primaryimageurl}
-              onClick={this.closeModal.bind(this)}/>
-            </Modal>
-          <img alt={details.title} src={details.primaryimageurl} onClick={this.handleClick.bind(this)}/>
-          <p className="med-font">
-          Artist: {details.people ? details.people[0].name : "Not Listed"}<br/>
-          Century: {details.century}<br/>
-          Classification: {details.classification}<br/>
-          Dimensions: {details.dimensions ? details.dimensions : "Not Found"}<br/>
-          </p>
-          <button type="submit" className="btn .btn--s" onClick={this.addToGallery.bind(this)}> + </button>
-        </form>
-        </div>
-      </div>
-      </div>
+        <div className="col-s-8 search-piece">
+          {/* <div className="row"> */}
+            <div>
+              <h5>{details.title}</h5>
+              </div>
+              <Modal className="modal-gallery" isOpen={this.state.modalIsOpen} contentLabel='Modal'>
+                <img className="img" alt={details.title} src={details.primaryimageurl}
+                  onClick={this.closeModal.bind(this)}/></Modal>
+                  <div>
+                    <img className="img-search" alt={details.title} src={details.primaryimageurl} onClick={this.handleClick.bind(this)}/>
+                  </div>
+                  <div className="search-piece-text">
+                    <p className="x-small-font">
+                      Artist: {details.people ? details.people[0].name : "Not Listed"}<br/>
+                      Century: {details.century}<br/>
+                      Classification: {details.classification}<br/>
+                      Dimensions: {details.dimensions ? details.dimensions : "Not Found"}<br/>
+                      <button type="submit" className="btn .btn--s" onClick={this.addToGallery.bind(this)}> + </button>
+                    </p>
+                  </div>
+                {/* </div> */}
+            </div>
+          </div>
     )
   }
 
