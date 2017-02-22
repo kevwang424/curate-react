@@ -70,7 +70,7 @@ class SearchPiece extends Component {
                       Century: {details.century}<br/>
                       Classification: {details.classification}<br/>
                       Dimensions: {details.dimensions ? details.dimensions : "Not Found"}<br/>
-                      <button type="submit" className="btn .btn--s" onClick={this.addToGallery.bind(this)}> + </button>
+                      <button type="submit" className="btn .btn--xs" onClick={this.addToGallery.bind(this)}> + </button>
                     </p>
                   </div>
                 {/* </div> */}

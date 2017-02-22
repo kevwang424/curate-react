@@ -28,17 +28,16 @@ class Gallery extends Component{
       }
     else {
     return(
-
       <div className="row">
         <div className="col-lg-6 col-s-12">
           <Search />
           <SearchResults gallery={gallery.id} />
         </div>
         <div className="gallery col-lg-6 col-s-12">
-          <h1>{gallery.name}</h1>
-          <h2>{gallery.description}</h2>
+          <h1 className="gallery-text">{gallery.name}</h1>
+          <h2 className="gallery-text">{gallery.description}</h2>
           {gallery.piece_ids.map( piece_id => <Piece key={piece_id} id={piece_id} gallery_id={gallery.id}/>)}
-          <div>
+          <div className="pg-align">
             <button className="btn" type="submit" onClick={this.handleDelete}>Delete Gallery</button>
             <button className="btn" onClick={this.modalOpen.bind(this)}>Edit Gallery</button>
             <Modal className="modal-user-gallery" isOpen={this.props.isModalOpen} contentLabel='Modal'>
