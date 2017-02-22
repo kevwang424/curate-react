@@ -26,13 +26,6 @@
   transition: background-color 300ms, color 300ms, border 300ms;
 }
 
-// .btn-logout:hover,
-// .btn:focus {
-//   color: $button-hover;
-//   border: 1px solid $btn-logout-hover;
-//   transition: background-color 300ms, color 300ms, border 300ms;
-// }
-
 .btn:active {
   color: $button-active;
   border: 1px solid $button-active;
