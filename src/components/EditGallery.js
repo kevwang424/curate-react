@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { editGallery } from '../actions'
+import { editGallery, closeModal } from '../actions'
 
 class EditGallery extends Component {
 
@@ -13,30 +13,24 @@ class EditGallery extends Component {
       id: this.props.gallery
     }
     this.props.editGallery(gallery)
+    this.props.closeModal()
   }
 
   render() {
     return(
     <div>
-      <h1>Edit your gallery</h1>
       <form onSubmit={this.handleSubmit.bind(this)}>
         <input type="text" defaultValue={this.props.name} ref="name"/>
         <input type="text" defaultValue={this.props.description} ref="description"/>
-        <button type="submit">Submit Changes</button>
+        <button className="btn" type="submit">Submit Changes</button>
       </form>
     </div>
     )
   }
 }
 
-function mapStateToProps(state){
-  return {
-    gallery: state.gallery
-  }
-}
-
 const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({editGallery}, dispatch)
+  return bindActionCreators({editGallery, closeModal}, dispatch)
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(EditGallery)
+export default connect(null, mapDispatchToProps)(EditGallery)
