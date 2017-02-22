@@ -12,6 +12,7 @@ $breakpoint-mobile: 480px;
 
 //colors
 $beige: #fdf8ec;
+$light-beige: #ffe;
 $ecru: #dbdcce;
 $pink-light: #fff0f5;
 $pink: #eed8cd;
@@ -42,12 +43,13 @@ $orange-yel: #ffb618;
 $red: #ff0000;
 $salmon: #FFAD84;
 $orange-salmon: #ffc784;
+$light-blue: #bbe3e3;
 
 
 //main colors
-$bg-color: $beige;
+$bg-color: $light-beige;
+// $bg-color: $beige;
 $main-text-color: $grey;
-// $header-color: $blue-persian;
 $header-color: $blue-persian;
 $header-bg-color: $grey-blue;
 // $header-bg-color: #bbe3e3;
@@ -60,10 +62,16 @@ $a-hover: $orange-yel;
 //button color
 $button-default: $grey;
 $button-hover: $blue-slate;
+$btn-logout-hover: $red;
 $button-active: $blue-med;
 $button-bg: $white;
 
 //form colors
-// $form-bg: $pink;
 $form-bg: $orange-salmon;
+// $form-bg: $pink;
 $input-border: $lavender;
+
+//welcome page
+// $h1-font: #d4f2f3;
+$h1-font: $light-blue;
+// $h1-font: $orange-yel;
