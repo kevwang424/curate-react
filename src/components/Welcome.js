@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 
 export default function Welcome(){
   return(
-    <div className="container">
+    <div className="container welcome">
       <div className="row off-lg-3">
         <h1>Welcome to IT DO CURATE!</h1>
       </div>
