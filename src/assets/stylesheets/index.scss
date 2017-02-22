@@ -1,21 +1,21 @@
 @charset 'utf-8';
 
-@import 'abstracts/vars';
-@import 'abstracts/functions';
+@import './abstracts/functions';
+@import './abstracts/vars';
 
-@import 'base/base';
-@import 'base/fonts';
-@import 'base/typography';
+@import './base/base';
+@import './base/fonts';
+@import './base/typography';
 
-@import 'layout/flex-grid';
-@import 'layout/layout';
-@import 'layout/header';
-@import 'layout/nav';
-@import 'layout/modal';
-@import 'layout/footer';
+@import './layout/flex-grid';
+@import './layout/layout';
+@import './layout/header';
+@import './layout/nav';
+@import './layout/modal';
+@import './layout/footer';
 
-@import 'modules/buttons';
-@import 'modules/forms';
-@import 'modules/loader';
+@import './modules/buttons';
+@import './modules/forms';
+@import './modules/loader';
 
-@import 'pages/gallery';
+@import './pages/gallery';

@@ -1,7 +1,8 @@
 {
-  "name": "curate-react",
-  "version": "0.1.0",
-  "private": true,
+  "name": "it-do-curate",
+  "version": "1.0.0",
+  "description": "curate you a museum",
+  "main": "index.js",
   "devDependencies": {
     "autoprefixer": "6.7.2",
     "babel-core": "6.22.1",
@@ -65,6 +66,8 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
+    "prod": "NODE_ENV=production node server.js",
+    "postinstall": "webpack -p",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
   },
