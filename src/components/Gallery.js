@@ -38,13 +38,13 @@ class Gallery extends Component{
           <h1>{gallery.name}</h1>
           <h2>{gallery.description}</h2>
           {gallery.piece_ids.map( piece_id => <Piece key={piece_id} id={piece_id} gallery_id={gallery.id}/>)}
-          <button className="btn" type="submit" onClick={this.handleDelete}>Delete Gallery</button>
-        </div>
-        <div>
-          <button className="btn" onClick={this.modalOpen.bind(this)}>Edit Gallery</button>
-          <Modal className="modal-user-gallery" isOpen={this.props.isModalOpen} contentLabel='Modal'>
-            <EditGallery name={gallery.name} description={gallery.description} gallery={gallery.id}/>
-          </Modal>
+          <div>
+            <button className="btn" type="submit" onClick={this.handleDelete}>Delete Gallery</button>
+            <button className="btn" onClick={this.modalOpen.bind(this)}>Edit Gallery</button>
+            <Modal className="modal-user-gallery" isOpen={this.props.isModalOpen} contentLabel='Modal'>
+              <EditGallery name={gallery.name} description={gallery.description} gallery={gallery.id}/>
+            </Modal>
+          </div>
         </div>
       </div>
     )

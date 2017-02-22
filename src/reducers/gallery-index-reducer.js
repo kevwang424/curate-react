@@ -6,6 +6,8 @@ export default function(state=[], action) {
       return action.payload.galleryIndex
     case 'DELETE_GALLERY':
       return action.payload
+    case 'EDIT_GALLERY':
+      return action.payload.galleryIndex
     default:
       return state
   }

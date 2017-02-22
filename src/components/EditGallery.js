@@ -20,7 +20,9 @@ class EditGallery extends Component {
     return(
     <div>
       <form onSubmit={this.handleSubmit.bind(this)}>
+        <label>Gallery Name</label>
         <input type="text" defaultValue={this.props.name} ref="name"/>
+        <label>Gallery Description</label>
         <input type="text" defaultValue={this.props.description} ref="description"/>
         <button className="btn" type="submit">Submit Changes</button>
       </form>
