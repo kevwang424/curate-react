@@ -26,14 +26,36 @@ $periwinkle: #add8e6;
 $white: #fff;
 $black: #000;
 $grey: #384040;
+$slate-blue: #6C9090;
+$dark-green: #2D6759;
+$granite: #3F5051;
+$dove-grey: #D0C9B9;
+$dusty-rose: #C68B82;
+$royale-blue: #0f1937;
+$tan: #ae9671;
+$grey-blue: #ccdbdd;
+$deep-red: #9e1c40;
+$soft-pink: #e6ddde;
+$grey-blu: #7a8c8c;
+$sunshine-yel: #fff1b5;
+$orange-yel: #ffb618;
+$red: #ff0000;
+$salmon: #FFAD84;
+$orange-salmon: #ffc784;
+
 
 //main colors
 $bg-color: $beige;
 $main-text-color: $grey;
+// $header-color: $blue-persian;
 $header-color: $blue-persian;
-$header-bg-color: $ecru;
+$header-bg-color: $grey-blue;
+// $header-bg-color: #bbe3e3;
+// $header-bg-color: $ecru;
 $a: $blue-slate;
-$a-hover: $green-hunter;
+// $a-hover: $green-hunter;
+$a-hover: $orange-yel;
+
 
 //button color
 $button-default: $grey;
@@ -42,5 +64,6 @@ $button-active: $blue-med;
 $button-bg: $white;
 
 //form colors
-$form-bg: $pink;
+// $form-bg: $pink;
+$form-bg: $orange-salmon;
 $input-border: $lavender;
