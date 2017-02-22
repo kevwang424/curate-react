@@ -4,7 +4,6 @@ import GalleryIndex from './GalleryIndex'
 import CreateGallery from './CreateGallery'
 import Logout from './Logout'
 
-
 class Nav extends Component {
   render(){
     return(
