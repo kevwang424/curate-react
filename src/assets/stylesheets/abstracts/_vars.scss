@@ -12,6 +12,7 @@ $breakpoint-mobile: 480px;
 
 //colors
 $beige: #fdf8ec;
+$light-beige: #ffe;
 $ecru: #dbdcce;
 $pink-light: #fff0f5;
 $pink: #eed8cd;
@@ -26,21 +27,51 @@ $periwinkle: #add8e6;
 $white: #fff;
 $black: #000;
 $grey: #384040;
+$slate-blue: #6C9090;
+$dark-green: #2D6759;
+$granite: #3F5051;
+$dove-grey: #D0C9B9;
+$dusty-rose: #C68B82;
+$royale-blue: #0f1937;
+$tan: #ae9671;
+$grey-blue: #ccdbdd;
+$deep-red: #9e1c40;
+$soft-pink: #e6ddde;
+$grey-blu: #7a8c8c;
+$sunshine-yel: #fff1b5;
+$orange-yel: #ffb618;
+$red: #ff0000;
+$salmon: #FFAD84;
+$orange-salmon: #ffc784;
+$light-blue: #bbe3e3;
+
 
 //main colors
-$bg-color: $beige;
+$bg-color: $light-beige;
+// $bg-color: $beige;
 $main-text-color: $grey;
 $header-color: $blue-persian;
-$header-bg-color: $ecru;
+$header-bg-color: $grey-blue;
+// $header-bg-color: #bbe3e3;
+// $header-bg-color: $ecru;
 $a: $blue-slate;
-$a-hover: $green-hunter;
+// $a-hover: $green-hunter;
+$a-hover: $orange-yel;
+
 
 //button color
 $button-default: $grey;
 $button-hover: $blue-slate;
+$btn-logout-hover: $red;
 $button-active: $blue-med;
 $button-bg: $white;
 
 //form colors
-$form-bg: $pink;
+$form-bg: $orange-salmon;
+// $form-bg: $pink;
 $input-border: $lavender;
+
+//welcome page
+// $h1-font: #d4f2f3;
+$h1-font: $light-blue;
+// $h1-font: $orange-yel;
