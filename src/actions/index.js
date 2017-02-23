@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { browserHistory } from 'react-router'
 
-const URL = 'https://curate-it-api.herokuapp.com/api/v1'
+const URL = "https://curate-it-api.herokuapp.com/api/v1"  
 axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
 
 
